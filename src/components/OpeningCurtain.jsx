@@ -109,7 +109,7 @@ export default function OpeningCurtain({ isOpen, onOpen, data }) {
 
         <p style={{ fontSize: '1.05rem', color: 'var(--sepia-soft)', marginBottom: '26px', fontStyle: 'italic', lineHeight: 1.5 }}>
           {data.weddingDateDisplay}<br />
-          {data.thalikettuVenueSub}
+          {data.thalikettuVenueTitle}
         </p>
 
         <button

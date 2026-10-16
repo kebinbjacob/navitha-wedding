@@ -14,8 +14,8 @@ export default function CalendarAndDirections({ data, onShowToast }) {
       "DTSTART:20261116T040000Z", // 9:30 AM IST is 04:00 UTC
       "DTEND:20261116T083000Z",
       `SUMMARY:Wedding Ceremony of ${data.bride} & ${data.groom}`,
-      `DESCRIPTION:Thalikettu Muhurtham (${data.muhurtham}) at ${data.thalikettuVenueSub}\\, followed by wedding assembly and feast at ${data.auditoriumVenueTitle}\\, ${data.auditoriumVenueSub}. Contact: ${data.contactPhone}.`,
-      `LOCATION:${data.thalikettuVenueSub} & ${data.auditoriumVenueTitle} ${data.auditoriumVenueSub}`,
+      `DESCRIPTION:Thalikettu Muhurtham (${data.muhurtham}) at ${data.thalikettuVenueTitle}\\, followed by wedding assembly and feast at ${data.auditoriumVenueTitle}\\, ${data.auditoriumVenueSub}. Contact: ${data.contactPhone}.`,
+      `LOCATION:${data.thalikettuVenueTitle}\\, ${data.thalikettuVenueSub} & ${data.auditoriumVenueTitle}\\, ${data.auditoriumVenueSub}`,
       "STATUS:CONFIRMED",
       "END:VEVENT",
       "END:VCALENDAR"
@@ -36,8 +36,8 @@ export default function CalendarAndDirections({ data, onShowToast }) {
   const gCalUrl = "https://calendar.google.com/calendar/render?action=TEMPLATE" +
     "&text=" + encodeURIComponent(`Wedding of ${data.bride} & ${data.groom}`) +
     "&dates=20261116T040000Z/20261116T083000Z" +
-    "&details=" + encodeURIComponent(`Thalikettu Muhurtham (${data.muhurtham}) at ${data.thalikettuVenueSub}, followed by wedding reception and lunch at ${data.auditoriumVenueTitle}, ${data.auditoriumVenueSub}. Contact: ${data.contactPhone}`) +
-    "&location=" + encodeURIComponent(`${data.thalikettuVenueSub} & ${data.auditoriumVenueTitle}, ${data.auditoriumVenueSub}`);
+    "&details=" + encodeURIComponent(`Thalikettu Muhurtham (${data.muhurtham}) at ${data.thalikettuVenueTitle}, followed by wedding reception and lunch at ${data.auditoriumVenueTitle}, ${data.auditoriumVenueSub}. Contact: ${data.contactPhone}`) +
+    "&location=" + encodeURIComponent(`${data.thalikettuVenueTitle}, ${data.thalikettuVenueSub} & ${data.auditoriumVenueTitle}, ${data.auditoriumVenueSub}`);
 
   return (
     <section id="venue" style={{ margin: '44px 0', textAlign: 'center' }}>
@@ -88,10 +88,10 @@ export default function CalendarAndDirections({ data, onShowToast }) {
               Ceremony • {data.muhurtham}
             </span>
             <h4 style={{ fontFamily: 'var(--font-title-serif)', fontSize: '1.35rem', color: 'var(--sepia-dark)', fontWeight: 700, marginBottom: '6px' }}>
-              {data.thalikettuVenueSub}
+              {data.thalikettuVenueTitle}
             </h4>
             <p style={{ fontSize: '1rem', color: 'var(--sepia-main)', marginBottom: '18px', lineHeight: 1.5 }}>
-              The sacred Thalikettu solemnization at the Holy Abode of Lord Guruvayurappan.
+              The sacred Thalikettu solemnization at the Holy Abode of Lord Guruvayurappan, Guruvayur.
             </p>
           </div>
           <a
@@ -105,7 +105,7 @@ export default function CalendarAndDirections({ data, onShowToast }) {
               <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
               <circle cx="12" cy="10" r="3"></circle>
             </svg>
-            Open Guruvayur Temple in Maps
+            Open Guruvayur Krishna Temple in Maps
           </a>
         </div>
 

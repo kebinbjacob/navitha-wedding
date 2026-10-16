@@ -5,7 +5,7 @@ export default function ShareSection({ data, onShowToast }) {
     const url = window.location.href;
     const shareData = {
       title: `Wedding Invitation | ${data.bride} & ${data.groom}`,
-      text: `Join us in celebrating the wedding of ${data.bride} & ${data.groom} on ${data.weddingDateDisplay} at ${data.thalikettuVenueSub}!`,
+      text: `Join us in celebrating the wedding of ${data.bride} & ${data.groom} on ${data.weddingDateDisplay} at ${data.thalikettuVenueTitle}!`,
       url: url
     };
 

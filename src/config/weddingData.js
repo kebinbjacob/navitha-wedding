@@ -16,8 +16,8 @@ export const DEFAULT_WEDDING_DATA = {
   countdownTargetISO: "2026-11-16T09:30:00+05:30", // Nov 16, 2026 09:30 AM IST
   
   // Ceremony Venues
-  thalikettuVenueTitle: "Guruvayur",
-  thalikettuVenueSub: "Sreekrishna Temple",
+  thalikettuVenueTitle: "Guruvayur Krishna Temple",
+  thalikettuVenueSub: "Guruvayur",
   auditoriumVenueTitle: "King Auditorium",
   auditoriumVenueSub: "Thalikulam",
 
@@ -27,7 +27,7 @@ export const DEFAULT_WEDDING_DATA = {
   whatsappNumber: "917594950818",
   
   // Maps Links
-  templeMapUrl: "https://www.google.com/maps/search/?api=1&query=Guruvayur+Sreekrishna+Temple",
+  templeMapUrl: "https://www.google.com/maps/search/?api=1&query=Guruvayur+Krishna+Temple",
   auditoriumMapUrl: "https://www.google.com/maps/search/?api=1&query=King+Auditorium+Thalikulam",
 
   // Google Forms Integration
