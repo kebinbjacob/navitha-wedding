@@ -67,9 +67,9 @@ export default function AudioPlayer({ isPlaying, setIsPlaying, onPlaySongRef }) 
           alignItems: 'center',
           gap: '8px',
           background: isPlaying ? 'var(--sepia-main)' : 'var(--bg-card)',
-          color: isPlaying ? '#FAF5EE' : 'var(--sepia-main)',
+          color: isPlaying ? '#FFF5F6' : 'var(--sepia-main)',
           border: '1px solid var(--sepia-faint-border)',
-          boxShadow: isPlaying ? '0 4px 18px rgba(122, 74, 46, 0.35)' : 'var(--shadow-soft)'
+          boxShadow: isPlaying ? '0 4px 18px rgba(158, 91, 106, 0.35)' : 'var(--shadow-soft)'
         }}
       >
         {isPlaying ? (
@@ -128,7 +128,7 @@ export default function AudioPlayer({ isPlaying, setIsPlaying, onPlaySongRef }) 
           border: '1px solid var(--sepia-faint-border)',
           borderRadius: '12px',
           padding: '10px 14px',
-          boxShadow: '0 8px 24px rgba(74, 44, 26, 0.25)',
+          boxShadow: '0 8px 24px rgba(79, 38, 49, 0.25)',
           zIndex: 1000,
           display: 'flex',
           alignItems: 'center',
@@ -150,7 +150,7 @@ export default function AudioPlayer({ isPlaying, setIsPlaying, onPlaySongRef }) 
       <style>{`
         .eq-bar {
           width: 2.5px;
-          background: #FAF5EE;
+          background: #FFF5F6;
           border-radius: 2px;
           animation: eq-bounce 1s infinite ease-in-out alternate;
         }

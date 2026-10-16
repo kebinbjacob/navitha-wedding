@@ -37,7 +37,7 @@ export default function CouplePortrait({ data }) {
           display: 'inline-block',
           position: 'relative',
           padding: '24px 20px 18px',
-          background: 'linear-gradient(180deg, var(--bg-card-inner) 0%, rgba(250, 246, 238, 0.4) 100%)',
+          background: 'linear-gradient(180deg, var(--bg-card-inner) 0%, rgba(253, 244, 246, 0.45) 100%)',
           border: '1px solid var(--sepia-faint-border)',
           borderRadius: 'var(--radius-lg)',
           boxShadow: 'var(--shadow-lift)',
@@ -56,7 +56,7 @@ export default function CouplePortrait({ data }) {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            background: 'radial-gradient(ellipse at center 60%, rgba(194, 154, 91, 0.12) 0%, transparent 70%)'
+            background: 'radial-gradient(ellipse at center 60%, rgba(201, 155, 109, 0.15) 0%, transparent 70%)'
           }}
         >
           {/* THE TRANSPARENT COUPLE IMAGE (No Background!) */}
@@ -70,7 +70,7 @@ export default function CouplePortrait({ data }) {
               maxHeight: '520px',
               objectFit: 'contain',
               display: 'block',
-              filter: 'drop-shadow(0 12px 24px rgba(74, 44, 26, 0.15))',
+              filter: 'drop-shadow(0 12px 24px rgba(79, 38, 49, 0.15))',
               transition: 'transform 0.7s var(--ease-silk)'
             }}
           />

@@ -2,20 +2,20 @@
    CSS VARIABLES & SEPIA LINE-ART THEME
    ========================================================================== */
 :root {
-  --bg-cream: #F3ECE0;
-  --bg-card: #FAF6EE;
-  --bg-card-inner: #FCFAF5;
+  --bg-cream: #FAF2F4;
+  --bg-card: #FFFBFB;
+  --bg-card-inner: #FCF3F5;
   
-  /* Sepia Palette */
-  --sepia-main: #7A4A2E;
-  --sepia-soft: #A67856;
-  --sepia-dark: #4A2C1A;
-  --sepia-light: #CBB49E;
-  --sepia-faint: rgba(122, 74, 46, 0.08);
-  --sepia-faint-border: rgba(122, 74, 46, 0.22);
+  /* Dusty Rose & Vintage Floral Palette */
+  --sepia-main: #9E5B6A;
+  --sepia-soft: #B97F8C;
+  --sepia-dark: #4F2631;
+  --sepia-light: #E8CBD2;
+  --sepia-faint: rgba(158, 91, 106, 0.08);
+  --sepia-faint-border: rgba(158, 91, 106, 0.22);
   
-  --gold-accent: #C29A5B;
-  --gold-glow: rgba(194, 154, 91, 0.35);
+  --gold-accent: #C99B6D;
+  --gold-glow: rgba(201, 155, 109, 0.35);
 
   /* Typography */
   --font-script: 'Great Vibes', 'Alex Brush', cursive;
@@ -23,8 +23,8 @@
   --font-title-serif: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
 
   /* Shadows & Easings */
-  --shadow-soft: 0 10px 30px rgba(74, 44, 26, 0.08);
-  --shadow-lift: 0 16px 40px rgba(74, 44, 26, 0.14);
+  --shadow-soft: 0 10px 30px rgba(79, 38, 49, 0.08);
+  --shadow-lift: 0 16px 40px rgba(79, 38, 49, 0.14);
   --ease-silk: cubic-bezier(0.25, 1, 0.5, 1);
   --radius-sm: 8px;
   --radius-md: 16px;
@@ -33,17 +33,17 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --bg-cream: #1B1510;
-    --bg-card: #251D16;
-    --bg-card-inner: #2D231B;
-    --sepia-main: #E2BC9B;
-    --sepia-soft: #C69F7E;
-    --sepia-dark: #F7EFE6;
-    --sepia-light: #6E533F;
-    --sepia-faint: rgba(226, 188, 155, 0.08);
-    --sepia-faint-border: rgba(226, 188, 155, 0.25);
-    --gold-accent: #E5BE7E;
-    --gold-glow: rgba(229, 190, 126, 0.25);
+    --bg-cream: #1C1316;
+    --bg-card: #271A1F;
+    --bg-card-inner: #332228;
+    --sepia-main: #E8A5B2;
+    --sepia-soft: #D596A3;
+    --sepia-dark: #FCEBED;
+    --sepia-light: #6E434D;
+    --sepia-faint: rgba(232, 165, 178, 0.1);
+    --sepia-faint-border: rgba(232, 165, 178, 0.28);
+    --gold-accent: #E5BF8E;
+    --gold-glow: rgba(229, 191, 142, 0.25);
     --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.45);
     --shadow-lift: 0 16px 40px rgba(0, 0, 0, 0.6);
   }
@@ -108,7 +108,7 @@ body {
   background: var(--bg-card);
   border: 1px solid var(--sepia-faint-border);
   border-radius: var(--radius-lg);
-  box-shadow: 0 20px 60px rgba(74, 44, 26, 0.12);
+  box-shadow: 0 20px 60px rgba(79, 38, 49, 0.12);
   padding: 70px 50px;
   overflow: hidden;
 }
@@ -135,7 +135,7 @@ body {
 .inner-border-thin {
   position: absolute;
   inset: 24px;
-  border: 0.5px solid rgba(122, 74, 46, 0.15);
+  border: 0.5px solid rgba(158, 91, 106, 0.15);
   border-radius: calc(var(--radius-lg) - 12px);
   pointer-events: none;
   z-index: 3;
@@ -184,27 +184,27 @@ body {
   transition: all 0.28s var(--ease-silk);
   border: 1px solid var(--sepia-main);
   background: var(--sepia-main);
-  color: #FAF6F0;
-  box-shadow: 0 5px 18px rgba(122, 74, 46, 0.22);
+  color: #FFF8F9;
+  box-shadow: 0 5px 18px rgba(158, 91, 106, 0.25);
 }
 
 .btn-sepia:hover {
   background: var(--sepia-dark);
   border-color: var(--sepia-dark);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(74, 44, 26, 0.3);
+  box-shadow: 0 8px 24px rgba(79, 38, 49, 0.32);
 }
 
 .btn-sepia-outline {
   background: var(--bg-card-inner);
   color: var(--sepia-main);
   border: 1px solid var(--sepia-soft);
-  box-shadow: 0 4px 14px rgba(122, 74, 46, 0.08);
+  box-shadow: 0 4px 14px rgba(158, 91, 106, 0.08);
 }
 
 .btn-sepia-outline:hover {
   background: var(--sepia-main);
-  color: #FAF6F0;
+  color: #FFF8F9;
   border-color: var(--sepia-main);
 }
 
@@ -229,7 +229,7 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 4px 15px rgba(74, 44, 26, 0.12);
+  box-shadow: 0 4px 15px rgba(79, 38, 49, 0.12);
   transition: all 0.25s ease;
 }
 
@@ -246,11 +246,11 @@ body {
   left: 50%;
   transform: translateX(-50%);
   z-index: 100;
-  background: rgba(250, 246, 238, 0.94);
+  background: rgba(255, 251, 251, 0.94);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   border: 1px solid var(--sepia-faint-border);
-  box-shadow: 0 8px 30px rgba(74, 44, 26, 0.16);
+  box-shadow: 0 8px 30px rgba(79, 38, 49, 0.14);
   border-radius: 40px;
   padding: 6px 14px;
   display: flex;
@@ -262,7 +262,7 @@ body {
 
 @media (prefers-color-scheme: dark) {
   .sticky-mini-nav {
-    background: rgba(37, 29, 22, 0.94);
+    background: rgba(39, 26, 31, 0.94);
   }
 }
 
@@ -292,7 +292,7 @@ body {
   left: 50%;
   transform: translateX(-50%) translateY(20px);
   background: var(--sepia-dark);
-  color: #FAF5EE;
+  color: #FFF5F6;
   padding: 12px 24px;
   border-radius: 30px;
   font-size: 0.95rem;

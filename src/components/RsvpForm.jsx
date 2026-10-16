@@ -184,7 +184,7 @@ export default function RsvpForm({ data, onShowToast }) {
                   cursor: 'pointer',
                   fontWeight: 600,
                   background: attendance.includes('joyfully') ? 'var(--sepia-main)' : 'var(--bg-cream)',
-                  color: attendance.includes('joyfully') ? '#FAF5EE' : 'var(--sepia-main)',
+                  color: attendance.includes('joyfully') ? '#FFF8F9' : 'var(--sepia-main)',
                   transition: 'all 0.2s ease'
                 }}
               >
@@ -201,7 +201,7 @@ export default function RsvpForm({ data, onShowToast }) {
                   cursor: 'pointer',
                   fontWeight: 600,
                   background: attendance.includes('declining') ? 'var(--sepia-main)' : 'var(--bg-cream)',
-                  color: attendance.includes('declining') ? '#FAF5EE' : 'var(--sepia-main)',
+                  color: attendance.includes('declining') ? '#FFF8F9' : 'var(--sepia-main)',
                   transition: 'all 0.2s ease'
                 }}
               >

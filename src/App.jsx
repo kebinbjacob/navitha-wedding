@@ -80,49 +80,95 @@ export default function App() {
           <div className="inner-border-line" aria-hidden="true" />
           <div className="inner-border-thin" aria-hidden="true" />
 
-          {/* Botanical Engraved Corner Ornaments */}
+          {/* Vintage Botanical Rose Corner Ornaments */}
           <svg className="corner-ornament corner-tl" viewBox="0 0 120 120" aria-hidden="true">
-            <path d="M6,6 Q6,60 30,85 Q45,100 80,105" strokeWidth="1.3"></path>
-            <path d="M6,6 Q60,6 85,30 Q100,45 105,80" strokeWidth="1.3"></path>
-            <circle cx="28" cy="28" r="14" strokeWidth="1.2"></circle>
-            <path d="M22,28 C22,22 34,22 34,28 C34,34 22,34 25,28" strokeWidth="1.1"></path>
-            <circle cx="68" cy="22" r="5" strokeWidth="1.1"></circle>
-            <circle cx="22" cy="68" r="5" strokeWidth="1.1"></circle>
-            <path d="M38,40 Q55,50 60,70 Q45,65 38,40" strokeWidth="1"></path>
-            <path d="M40,38 Q50,55 70,60 Q65,45 40,38" strokeWidth="1"></path>
+            {/* Main Arching Rose Stems */}
+            <path d="M4,4 Q6,50 26,76 Q42,94 86,102" strokeWidth="1.2" />
+            <path d="M4,4 Q50,6 76,26 Q94,42 102,86" strokeWidth="1.2" />
+            
+            {/* Central Blooming Wild Rose */}
+            <path d="M28,16 C22,10 34,10 28,16" strokeWidth="1" />
+            <path d="M38,24 C46,20 44,32 38,24" strokeWidth="1" />
+            <path d="M34,36 C40,42 28,44 34,36" strokeWidth="1" />
+            <path d="M20,34 C12,38 16,24 22,32" strokeWidth="1" />
+            <path d="M18,22 C12,16 26,12 20,24" strokeWidth="1" />
+            <circle cx="28" cy="27" r="5" strokeWidth="1" />
+            <path d="M26,26 C26,24 30,24 30,26 C30,28 26,28 27,26" strokeWidth="0.8" />
+            
+            {/* Botanical Rose Leaves with Center Veins */}
+            <path d="M48,22 Q62,12 76,22 Q62,32 48,22" strokeWidth="0.9" />
+            <path d="M48,22 L72,22" strokeWidth="0.7" />
+            
+            <path d="M22,48 Q12,62 22,76 Q32,62 22,48" strokeWidth="0.9" />
+            <path d="M22,48 L22,72" strokeWidth="0.7" />
+
+            {/* Side Rosebuds */}
+            <path d="M78,30 C80,20 90,24 86,34 Q82,40 78,30" strokeWidth="0.9" />
+            <path d="M30,78 C20,80 24,90 34,86 Q40,82 30,78" strokeWidth="0.9" />
+
+            {/* Romantic Swirling Tendrils */}
+            <path d="M68,52 Q82,62 90,56 Q94,52 90,46" strokeWidth="0.8" />
+            <path d="M52,68 Q62,82 56,90 Q52,94 46,90" strokeWidth="0.8" />
           </svg>
 
           <svg className="corner-ornament corner-tr" viewBox="0 0 120 120" aria-hidden="true">
-            <path d="M6,6 Q6,60 30,85 Q45,100 80,105" strokeWidth="1.3"></path>
-            <path d="M6,6 Q60,6 85,30 Q100,45 105,80" strokeWidth="1.3"></path>
-            <circle cx="28" cy="28" r="14" strokeWidth="1.2"></circle>
-            <path d="M22,28 C22,22 34,22 34,28 C34,34 22,34 25,28" strokeWidth="1.1"></path>
-            <circle cx="68" cy="22" r="5" strokeWidth="1.1"></circle>
-            <circle cx="22" cy="68" r="5" strokeWidth="1.1"></circle>
-            <path d="M38,40 Q55,50 60,70 Q45,65 38,40" strokeWidth="1"></path>
-            <path d="M40,38 Q50,55 70,60 Q65,45 40,38" strokeWidth="1"></path>
+            <path d="M4,4 Q6,50 26,76 Q42,94 86,102" strokeWidth="1.2" />
+            <path d="M4,4 Q50,6 76,26 Q94,42 102,86" strokeWidth="1.2" />
+            <path d="M28,16 C22,10 34,10 28,16" strokeWidth="1" />
+            <path d="M38,24 C46,20 44,32 38,24" strokeWidth="1" />
+            <path d="M34,36 C40,42 28,44 34,36" strokeWidth="1" />
+            <path d="M20,34 C12,38 16,24 22,32" strokeWidth="1" />
+            <path d="M18,22 C12,16 26,12 20,24" strokeWidth="1" />
+            <circle cx="28" cy="27" r="5" strokeWidth="1" />
+            <path d="M26,26 C26,24 30,24 30,26 C30,28 26,28 27,26" strokeWidth="0.8" />
+            <path d="M48,22 Q62,12 76,22 Q62,32 48,22" strokeWidth="0.9" />
+            <path d="M48,22 L72,22" strokeWidth="0.7" />
+            <path d="M22,48 Q12,62 22,76 Q32,62 22,48" strokeWidth="0.9" />
+            <path d="M22,48 L22,72" strokeWidth="0.7" />
+            <path d="M78,30 C80,20 90,24 86,34 Q82,40 78,30" strokeWidth="0.9" />
+            <path d="M30,78 C20,80 24,90 34,86 Q40,82 30,78" strokeWidth="0.9" />
+            <path d="M68,52 Q82,62 90,56 Q94,52 90,46" strokeWidth="0.8" />
+            <path d="M52,68 Q62,82 56,90 Q52,94 46,90" strokeWidth="0.8" />
           </svg>
 
           <svg className="corner-ornament corner-bl" viewBox="0 0 120 120" aria-hidden="true">
-            <path d="M6,6 Q6,60 30,85 Q45,100 80,105" strokeWidth="1.3"></path>
-            <path d="M6,6 Q60,6 85,30 Q100,45 105,80" strokeWidth="1.3"></path>
-            <circle cx="28" cy="28" r="14" strokeWidth="1.2"></circle>
-            <path d="M22,28 C22,22 34,22 34,28 C34,34 22,34 25,28" strokeWidth="1.1"></path>
-            <circle cx="68" cy="22" r="5" strokeWidth="1.1"></circle>
-            <circle cx="22" cy="68" r="5" strokeWidth="1.1"></circle>
-            <path d="M38,40 Q55,50 60,70 Q45,65 38,40" strokeWidth="1"></path>
-            <path d="M40,38 Q50,55 70,60 Q65,45 40,38" strokeWidth="1"></path>
+            <path d="M4,4 Q6,50 26,76 Q42,94 86,102" strokeWidth="1.2" />
+            <path d="M4,4 Q50,6 76,26 Q94,42 102,86" strokeWidth="1.2" />
+            <path d="M28,16 C22,10 34,10 28,16" strokeWidth="1" />
+            <path d="M38,24 C46,20 44,32 38,24" strokeWidth="1" />
+            <path d="M34,36 C40,42 28,44 34,36" strokeWidth="1" />
+            <path d="M20,34 C12,38 16,24 22,32" strokeWidth="1" />
+            <path d="M18,22 C12,16 26,12 20,24" strokeWidth="1" />
+            <circle cx="28" cy="27" r="5" strokeWidth="1" />
+            <path d="M26,26 C26,24 30,24 30,26 C30,28 26,28 27,26" strokeWidth="0.8" />
+            <path d="M48,22 Q62,12 76,22 Q62,32 48,22" strokeWidth="0.9" />
+            <path d="M48,22 L72,22" strokeWidth="0.7" />
+            <path d="M22,48 Q12,62 22,76 Q32,62 22,48" strokeWidth="0.9" />
+            <path d="M22,48 L22,72" strokeWidth="0.7" />
+            <path d="M78,30 C80,20 90,24 86,34 Q82,40 78,30" strokeWidth="0.9" />
+            <path d="M30,78 C20,80 24,90 34,86 Q40,82 30,78" strokeWidth="0.9" />
+            <path d="M68,52 Q82,62 90,56 Q94,52 90,46" strokeWidth="0.8" />
+            <path d="M52,68 Q62,82 56,90 Q52,94 46,90" strokeWidth="0.8" />
           </svg>
 
           <svg className="corner-ornament corner-br" viewBox="0 0 120 120" aria-hidden="true">
-            <path d="M6,6 Q6,60 30,85 Q45,100 80,105" strokeWidth="1.3"></path>
-            <path d="M6,6 Q60,6 85,30 Q100,45 105,80" strokeWidth="1.3"></path>
-            <circle cx="28" cy="28" r="14" strokeWidth="1.2"></circle>
-            <path d="M22,28 C22,22 34,22 34,28 C34,34 22,34 25,28" strokeWidth="1.1"></path>
-            <circle cx="68" cy="22" r="5" strokeWidth="1.1"></circle>
-            <circle cx="22" cy="68" r="5" strokeWidth="1.1"></circle>
-            <path d="M38,40 Q55,50 60,70 Q45,65 38,40" strokeWidth="1"></path>
-            <path d="M40,38 Q50,55 70,60 Q65,45 40,38" strokeWidth="1"></path>
+            <path d="M4,4 Q6,50 26,76 Q42,94 86,102" strokeWidth="1.2" />
+            <path d="M4,4 Q50,6 76,26 Q94,42 102,86" strokeWidth="1.2" />
+            <path d="M28,16 C22,10 34,10 28,16" strokeWidth="1" />
+            <path d="M38,24 C46,20 44,32 38,24" strokeWidth="1" />
+            <path d="M34,36 C40,42 28,44 34,36" strokeWidth="1" />
+            <path d="M20,34 C12,38 16,24 22,32" strokeWidth="1" />
+            <path d="M18,22 C12,16 26,12 20,24" strokeWidth="1" />
+            <circle cx="28" cy="27" r="5" strokeWidth="1" />
+            <path d="M26,26 C26,24 30,24 30,26 C30,28 26,28 27,26" strokeWidth="0.8" />
+            <path d="M48,22 Q62,12 76,22 Q62,32 48,22" strokeWidth="0.9" />
+            <path d="M48,22 L72,22" strokeWidth="0.7" />
+            <path d="M22,48 Q12,62 22,76 Q32,62 22,48" strokeWidth="0.9" />
+            <path d="M22,48 L22,72" strokeWidth="0.7" />
+            <path d="M78,30 C80,20 90,24 86,34 Q82,40 78,30" strokeWidth="0.9" />
+            <path d="M30,78 C20,80 24,90 34,86 Q40,82 30,78" strokeWidth="0.9" />
+            <path d="M68,52 Q82,62 90,56 Q94,52 90,46" strokeWidth="0.8" />
+            <path d="M52,68 Q62,82 56,90 Q52,94 46,90" strokeWidth="0.8" />
           </svg>
 
           {/* 1. Header: Radha-Krishna Medallion & Hare Krishna */}

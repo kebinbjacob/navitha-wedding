@@ -23,19 +23,31 @@ export default function PetalsCanvas({ isPetalsActive, setIsPetalsActive }) {
       reset(initial = false) {
         this.x = Math.random() * canvas.width;
         this.y = initial ? Math.random() * canvas.height : -20;
-        this.size = Math.random() * 8 + 6;
-        this.speedY = Math.random() * 0.9 + 0.6;
-        this.speedX = Math.random() * 0.8 - 0.4;
+        this.size = Math.random() * 9 + 7;
+        this.speedY = Math.random() * 0.8 + 0.55;
+        this.speedX = Math.random() * 0.6 - 0.3;
         this.rotation = Math.random() * Math.PI * 2;
-        this.rotationSpeed = (Math.random() - 0.5) * 0.02;
-        this.opacity = Math.random() * 0.5 + 0.35;
-        this.isMarigold = Math.random() < 0.25;
+        this.rotationSpeed = (Math.random() - 0.5) * 0.018;
+        this.flip = Math.random() * Math.PI * 2;
+        this.flipSpeed = Math.random() * 0.025 + 0.015;
+        this.opacity = Math.random() * 0.4 + 0.45;
+        
+        // 3 Petal Variations: Dusty Rose (40%), Soft Blush (40%), Porcelain White (20%)
+        const rand = Math.random();
+        if (rand < 0.4) {
+          this.colorType = 'dustyRose';
+        } else if (rand < 0.8) {
+          this.colorType = 'blushPink';
+        } else {
+          this.colorType = 'porcelain';
+        }
       }
       update() {
         this.y += this.speedY;
-        this.x += Math.sin(this.y * 0.01) * 0.6 + this.speedX;
+        this.x += Math.sin(this.y * 0.012) * 0.7 + this.speedX;
         this.rotation += this.rotationSpeed;
-        if (this.y > canvas.height + 20) {
+        this.flip += this.flipSpeed;
+        if (this.y > canvas.height + 25) {
           this.reset();
         }
       }
@@ -43,21 +55,30 @@ export default function PetalsCanvas({ isPetalsActive, setIsPetalsActive }) {
         ctx.save();
         ctx.translate(this.x, this.y);
         ctx.rotate(this.rotation);
+        // 3D flip scaling on Y axis for realistic tumbling petal effect
+        const scaleY = Math.cos(this.flip);
+        ctx.scale(1, scaleY);
         ctx.globalAlpha = this.opacity;
 
-        if (this.isMarigold) {
-          ctx.fillStyle = '#D4A054';
-          ctx.strokeStyle = '#A67856';
+        if (this.colorType === 'dustyRose') {
+          ctx.fillStyle = '#E596A4';
+          ctx.strokeStyle = '#9E5B6A';
+        } else if (this.colorType === 'blushPink') {
+          ctx.fillStyle = '#F9DDE2';
+          ctx.strokeStyle = '#D596A3';
         } else {
-          ctx.fillStyle = '#FDFBF7';
-          ctx.strokeStyle = 'rgba(122, 74, 46, 0.4)';
+          ctx.fillStyle = '#FFF5F6';
+          ctx.strokeStyle = 'rgba(185, 127, 140, 0.45)';
         }
 
-        ctx.lineWidth = 0.6;
+        ctx.lineWidth = 0.5;
+        // Realistic Rose Petal: Heart-notched top, rounded curves, tapered base
         ctx.beginPath();
-        ctx.moveTo(0, -this.size);
-        ctx.quadraticCurveTo(this.size * 0.6, 0, 0, this.size);
-        ctx.quadraticCurveTo(-this.size * 0.6, 0, 0, -this.size);
+        ctx.moveTo(0, this.size * 0.9);
+        ctx.bezierCurveTo(-this.size * 0.8, this.size * 0.2, -this.size * 0.8, -this.size * 0.6, -this.size * 0.2, -this.size * 0.9);
+        ctx.quadraticCurveTo(0, -this.size * 0.75, this.size * 0.2, -this.size * 0.9);
+        ctx.bezierCurveTo(this.size * 0.8, -this.size * 0.6, this.size * 0.8, this.size * 0.2, 0, this.size * 0.9);
+        ctx.closePath();
         ctx.fill();
         ctx.stroke();
 

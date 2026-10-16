@@ -14,7 +14,7 @@ export default function HeaderSection() {
             borderRadius: '50% / 45%',
             padding: '4px',
             background: 'var(--bg-card-inner)',
-            boxShadow: '0 8px 24px rgba(74, 44, 26, 0.18)',
+            boxShadow: '0 8px 24px rgba(79, 38, 49, 0.18)',
             position: 'relative',
             display: 'flex',
             alignItems: 'center',
@@ -41,8 +41,8 @@ export default function HeaderSection() {
               borderRadius: '50% / 45%',
               overflow: 'hidden',
               position: 'relative',
-              background: '#F3ECE0',
-              border: '1px solid rgba(122, 74, 46, 0.3)'
+              background: 'var(--bg-cream)',
+              border: '1px solid var(--sepia-faint-border)'
             }}
           >
             <img
