@@ -2,52 +2,37 @@
    CSS VARIABLES & SEPIA LINE-ART THEME
    ========================================================================== */
 :root {
-  --bg-cream: #FAF2F4;
-  --bg-card: #FFFBFB;
-  --bg-card-inner: #FCF3F5;
+  /* Ultra-Light, Bright & Airy Dusty Rose / Blush Theme */
+  --bg-cream: #FFF7F8;
+  --bg-card: #FFFFFF;
+  --bg-card-inner: #FFF3F5;
   
-  /* Dusty Rose & Vintage Floral Palette */
+  /* Soft Romantic Rose Palette (Never Over-Dark) */
   --sepia-main: #9E5B6A;
-  --sepia-soft: #B97F8C;
-  --sepia-dark: #4F2631;
-  --sepia-light: #E8CBD2;
-  --sepia-faint: rgba(158, 91, 106, 0.08);
-  --sepia-faint-border: rgba(158, 91, 106, 0.22);
+  --sepia-soft: #BC8390;
+  --sepia-dark: #683845;
+  --sepia-light: #F4E2E6;
+  --sepia-faint: rgba(158, 91, 106, 0.04);
+  --sepia-faint-border: rgba(158, 91, 106, 0.16);
   
   --gold-accent: #C99B6D;
-  --gold-glow: rgba(201, 155, 109, 0.35);
+  --gold-glow: rgba(201, 155, 109, 0.25);
 
   /* Typography */
   --font-script: 'Great Vibes', 'Alex Brush', cursive;
   --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
   --font-title-serif: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
 
-  /* Shadows & Easings */
-  --shadow-soft: 0 10px 30px rgba(79, 38, 49, 0.08);
-  --shadow-lift: 0 16px 40px rgba(79, 38, 49, 0.14);
+  /* Airy Ethereal Shadows */
+  --shadow-soft: 0 8px 24px rgba(158, 91, 106, 0.06);
+  --shadow-lift: 0 14px 35px rgba(158, 91, 106, 0.09);
   --ease-silk: cubic-bezier(0.25, 1, 0.5, 1);
   --radius-sm: 8px;
   --radius-md: 16px;
   --radius-lg: 24px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg-cream: #1C1316;
-    --bg-card: #271A1F;
-    --bg-card-inner: #332228;
-    --sepia-main: #E8A5B2;
-    --sepia-soft: #D596A3;
-    --sepia-dark: #FCEBED;
-    --sepia-light: #6E434D;
-    --sepia-faint: rgba(232, 165, 178, 0.1);
-    --sepia-faint-border: rgba(232, 165, 178, 0.28);
-    --gold-accent: #E5BF8E;
-    --gold-glow: rgba(229, 191, 142, 0.25);
-    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.45);
-    --shadow-lift: 0 16px 40px rgba(0, 0, 0, 0.6);
-  }
-}
+/* Force pure light theme always (no dark mode inversion) */
 
 *, *::before, *::after {
   box-sizing: border-box;
@@ -71,17 +56,15 @@ body {
   position: relative;
 }
 
-/* Paper Grain Texture Overlay */
+/* Paper Grain Texture Overlay (Very Subtle, Light & Clean) */
 .paper-texture {
   position: fixed;
   inset: 0;
   pointer-events: none;
   z-index: 1;
-  opacity: 0.35;
-  background-image: radial-gradient(var(--sepia-main) 0.6px, transparent 0.6px), radial-gradient(var(--sepia-dark) 0.6px, var(--bg-cream) 0.6px);
-  background-size: 24px 24px;
-  background-position: 0 0, 12px 12px;
-  mix-blend-mode: multiply;
+  opacity: 0.12;
+  background-image: radial-gradient(var(--sepia-main) 0.5px, transparent 0.5px);
+  background-size: 20px 20px;
 }
 
 /* Canvas for Floating Petals */
@@ -108,7 +91,7 @@ body {
   background: var(--bg-card);
   border: 1px solid var(--sepia-faint-border);
   border-radius: var(--radius-lg);
-  box-shadow: 0 20px 60px rgba(79, 38, 49, 0.12);
+  box-shadow: 0 16px 48px rgba(158, 91, 106, 0.08);
   padding: 70px 50px;
   overflow: hidden;
 }
@@ -246,11 +229,11 @@ body {
   left: 50%;
   transform: translateX(-50%);
   z-index: 100;
-  background: rgba(255, 251, 251, 0.94);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--sepia-faint-border);
-  box-shadow: 0 8px 30px rgba(79, 38, 49, 0.14);
+  box-shadow: 0 8px 30px rgba(158, 91, 106, 0.10);
   border-radius: 40px;
   padding: 6px 14px;
   display: flex;
@@ -258,12 +241,6 @@ body {
   gap: 8px;
   max-width: 92vw;
   overflow-x: auto;
-}
-
-@media (prefers-color-scheme: dark) {
-  .sticky-mini-nav {
-    background: rgba(39, 26, 31, 0.94);
-  }
 }
 
 .nav-dot {

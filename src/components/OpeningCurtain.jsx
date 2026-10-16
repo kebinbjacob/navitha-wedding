@@ -33,7 +33,7 @@ export default function OpeningCurtain({ isOpen, onOpen, data }) {
           background: 'var(--bg-card)',
           border: '1px solid var(--sepia-faint-border)',
           borderRadius: 'var(--radius-md)',
-          boxShadow: '0 25px 60px rgba(79, 38, 49, 0.22)',
+          boxShadow: '0 18px 50px rgba(158, 91, 106, 0.12)',
           padding: '44px 30px',
           textAlign: 'center',
           position: 'relative',
@@ -64,7 +64,7 @@ export default function OpeningCurtain({ isOpen, onOpen, data }) {
             justifyContent: 'center',
             position: 'relative',
             background: 'var(--bg-card-inner)',
-            boxShadow: '0 4px 18px rgba(158, 91, 106, 0.2)',
+            boxShadow: '0 4px 15px rgba(158, 91, 106, 0.12)',
             padding: '3px'
           }}
         >
@@ -121,7 +121,7 @@ export default function OpeningCurtain({ isOpen, onOpen, data }) {
           }}
           style={{
             animation: 'pulse-gentle 2.4s infinite ease-in-out',
-            boxShadow: '0 8px 24px rgba(158, 91, 106, 0.38)'
+            boxShadow: '0 6px 20px rgba(158, 91, 106, 0.25)'
           }}
         >
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
