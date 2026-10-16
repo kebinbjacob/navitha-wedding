@@ -1,0 +1,2334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Wedding Invitation | Navitha &amp; Shahin</title>
+  <meta name="description" content="Wedding ceremony and celebration of Navitha & Shahin on November 16, 2026 at Guruvayur Sreekrishna Temple and King Auditorium, Thalikulam.">
+
+  <!-- Open Graph metadata -->
+  <meta property="og:title" content="Navitha &amp; Shahin - Wedding Invitation">
+  <meta property="og:description" content="We cordially invite you with family to witness and bless our wedding ceremony on November 16, 2026.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="couple-portrait.jpg">
+
+  <!-- Google Fonts: Elegant Calligraphy & Refined Serif -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       CSS VARIABLES & THEME SYSTEM (Sepia Line-Art Palette)
+       ========================================================================== */
+    :root {
+      --bg-cream: #F3ECE0;
+      --bg-card: #FAF6EE;
+      --bg-card-inner: #FCFAF5;
+      
+      /* Sepia Palette */
+      --sepia-main: #7A4A2E;
+      --sepia-soft: #A67856;
+      --sepia-dark: #4A2C1A;
+      --sepia-light: #CBB49E;
+      --sepia-faint: rgba(122, 74, 46, 0.08);
+      --sepia-faint-border: rgba(122, 74, 46, 0.22);
+      
+      --gold-accent: #C29A5B;
+      --gold-glow: rgba(194, 154, 91, 0.35);
+
+      /* Typography */
+      --font-script: 'Great Vibes', 'Alex Brush', 'Pinyon Script', cursive;
+      --font-serif: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+      --font-title-serif: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+
+      /* Elevation & Transitions */
+      --shadow-soft: 0 10px 30px rgba(74, 44, 26, 0.08);
+      --shadow-lift: 0 16px 40px rgba(74, 44, 26, 0.14);
+      --ease-silk: cubic-bezier(0.25, 1, 0.5, 1);
+      --radius-sm: 8px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+    }
+
+    /* Dark Mode Palette (Subtle deep sepia parchment preservation) */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg-cream: #1B1510;
+        --bg-card: #251D16;
+        --bg-card-inner: #2D231B;
+        --sepia-main: #E2BC9B;
+        --sepia-soft: #C69F7E;
+        --sepia-dark: #F7EFE6;
+        --sepia-light: #6E533F;
+        --sepia-faint: rgba(226, 188, 155, 0.08);
+        --sepia-faint-border: rgba(226, 188, 155, 0.25);
+        --gold-accent: #E5BE7E;
+        --gold-glow: rgba(229, 190, 126, 0.25);
+        --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.45);
+        --shadow-lift: 0 16px 40px rgba(0, 0, 0, 0.6);
+      }
+    }
+
+    /* Resets & Base Setup */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      background-color: var(--bg-cream);
+      color: var(--sepia-main);
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      line-height: 1.65;
+      overflow-x: hidden;
+      min-height: 100vh;
+      position: relative;
+    }
+
+    /* Paper Grain Texture Overlay */
+    .paper-texture {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 1;
+      opacity: 0.35;
+      background-image: radial-gradient(var(--sepia-main) 0.6px, transparent 0.6px), radial-gradient(var(--sepia-dark) 0.6px, var(--bg-cream) 0.6px);
+      background-size: 24px 24px;
+      background-position: 0 0, 12px 12px;
+      mix-blend-mode: multiply;
+    }
+
+    /* Floating Petals Canvas */
+    #petals-canvas {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    /* Accessibility focus rings */
+    button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible {
+      outline: 2px solid var(--sepia-main);
+      outline-offset: 3px;
+    }
+
+    /* ==========================================================================
+       OPENING EXPERIENCE (Envelope / Temple Door Intro)
+       ========================================================================== */
+    .intro-curtain {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background-color: var(--bg-cream);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+      transition: opacity 1.1s var(--ease-silk), visibility 1.1s var(--ease-silk);
+      perspective: 1200px;
+    }
+
+    .intro-curtain.opened {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    .envelope-box {
+      width: 100%;
+      max-width: 440px;
+      background: var(--bg-card);
+      border: 1px solid var(--sepia-faint-border);
+      border-radius: var(--radius-md);
+      box-shadow: 0 25px 60px rgba(74, 44, 26, 0.22);
+      padding: 44px 30px;
+      text-align: center;
+      position: relative;
+      cursor: pointer;
+      overflow: hidden;
+      transition: transform 0.4s var(--ease-silk), box-shadow 0.4s var(--ease-silk);
+    }
+
+    .envelope-box:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 32px 70px rgba(74, 44, 26, 0.28);
+    }
+
+    .envelope-border {
+      position: absolute;
+      inset: 12px;
+      border: 1px dashed var(--sepia-soft);
+      border-radius: calc(var(--radius-md) - 6px);
+      pointer-events: none;
+      opacity: 0.7;
+    }
+
+    .envelope-icon-wrap {
+      width: 88px;
+      height: 88px;
+      margin: 0 auto 20px;
+      border-radius: 50%;
+      border: 1.5px solid var(--sepia-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      background: var(--bg-card-inner);
+      box-shadow: 0 4px 16px rgba(122, 74, 46, 0.12);
+    }
+
+    .envelope-icon-wrap::after {
+      content: '';
+      position: absolute;
+      inset: -6px;
+      border-radius: 50%;
+      border: 1px solid var(--sepia-faint-border);
+    }
+
+    .intro-script-greeting {
+      font-family: var(--font-script);
+      font-size: 2.4rem;
+      color: var(--sepia-dark);
+      margin-bottom: 6px;
+    }
+
+    .intro-subtext {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--sepia-soft);
+      margin-bottom: 18px;
+    }
+
+    .wax-seal-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--sepia-main);
+      color: #FAF5EE;
+      border: none;
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 600;
+      padding: 14px 28px;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(122, 74, 46, 0.35);
+      transition: all 0.3s ease;
+      animation: pulse-gentle 2.6s infinite ease-in-out;
+    }
+
+    @keyframes pulse-gentle {
+      0%, 100% { transform: scale(1); box-shadow: 0 6px 20px rgba(122, 74, 46, 0.35); }
+      50% { transform: scale(1.04); box-shadow: 0 10px 28px rgba(122, 74, 46, 0.48); }
+    }
+
+    .wax-seal-btn:hover {
+      background: var(--sepia-dark);
+      transform: translateY(-2px);
+    }
+
+    .audio-notice {
+      margin-top: 18px;
+      font-size: 0.85rem;
+      color: var(--sepia-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    /* ==========================================================================
+       FLOATING CONTROLS & STICKY NAV
+       ========================================================================== */
+    .top-controls {
+      position: fixed;
+      top: 18px;
+      right: 18px;
+      z-index: 100;
+      display: flex;
+      gap: 10px;
+    }
+
+    .control-btn {
+      background: var(--bg-card);
+      border: 1px solid var(--sepia-faint-border);
+      color: var(--sepia-main);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(74, 44, 26, 0.12);
+      transition: all 0.25s ease;
+    }
+
+    .control-btn:hover {
+      transform: scale(1.08);
+      background: var(--bg-card-inner);
+      border-color: var(--sepia-main);
+    }
+
+    .sticky-mini-nav {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 100;
+      background: rgba(250, 246, 238, 0.94);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid var(--sepia-faint-border);
+      box-shadow: 0 8px 30px rgba(74, 44, 26, 0.16);
+      border-radius: 40px;
+      padding: 6px 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      max-width: 92vw;
+      overflow-x: auto;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .sticky-mini-nav {
+        background: rgba(37, 29, 22, 0.94);
+      }
+    }
+
+    .nav-dot {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--sepia-soft);
+      transition: all 0.25s ease;
+      white-space: nowrap;
+    }
+
+    .nav-dot:hover, .nav-dot.active {
+      background: var(--sepia-main);
+      color: #FFFDF9;
+    }
+
+    /* ==========================================================================
+       MAIN CONTAINER & INTRICATE ENGRAVED CORNER FRAMING
+       ========================================================================== */
+    .card-page {
+      position: relative;
+      z-index: 10;
+      max-width: 1040px;
+      margin: 36px auto 100px;
+      padding: 30px 20px;
+    }
+
+    .invitation-frame {
+      position: relative;
+      background: var(--bg-card);
+      border: 1px solid var(--sepia-faint-border);
+      border-radius: var(--radius-lg);
+      box-shadow: 0 20px 60px rgba(74, 44, 26, 0.12);
+      padding: 70px 50px;
+      overflow: hidden;
+    }
+
+    @media (max-width: 768px) {
+      .card-page {
+        margin: 12px auto 80px;
+        padding: 10px;
+      }
+      .invitation-frame {
+        padding: 44px 20px;
+      }
+    }
+
+    /* Elegant Double Inner Border */
+    .inner-border-line {
+      position: absolute;
+      inset: 18px;
+      border: 1px solid var(--sepia-faint-border);
+      border-radius: calc(var(--radius-lg) - 8px);
+      pointer-events: none;
+      z-index: 3;
+    }
+
+    .inner-border-thin {
+      position: absolute;
+      inset: 24px;
+      border: 0.5px solid rgba(122, 74, 46, 0.15);
+      border-radius: calc(var(--radius-lg) - 12px);
+      pointer-events: none;
+      z-index: 3;
+    }
+
+    /* Hand-Drawn Floral Corners (SVG) */
+    .corner-ornament {
+      position: absolute;
+      width: 130px;
+      height: 130px;
+      pointer-events: none;
+      z-index: 4;
+      stroke: var(--sepia-main);
+      fill: none;
+      opacity: 0.92;
+      transition: transform 0.6s var(--ease-silk);
+    }
+
+    .corner-tl { top: 12px; left: 12px; }
+    .corner-tr { top: 12px; right: 12px; transform: scaleX(-1); }
+    .corner-bl { bottom: 12px; left: 12px; transform: scaleY(-1); }
+    .corner-br { bottom: 12px; right: 12px; transform: scale(-1); }
+
+    @media (max-width: 600px) {
+      .corner-ornament {
+        width: 80px;
+        height: 80px;
+      }
+    }
+
+    /* Sway animation */
+    @keyframes floral-sway {
+      0%, 100% { transform: rotate(0deg); }
+      50% { transform: rotate(1.8deg); }
+    }
+
+    .invitation-frame:hover .corner-tl {
+      animation: floral-sway 4s infinite ease-in-out;
+    }
+
+    /* ==========================================================================
+       SECTION REVEAL & FADE ANIMATIONS
+       ========================================================================== */
+    .reveal-section {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.9s var(--ease-silk), transform 0.9s var(--ease-silk);
+    }
+
+    .reveal-section.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ==========================================================================
+       1. HEADER: LAUREL WREATH & RADHA KRISHNA MEDALLION
+       ========================================================================== */
+    .header-section {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .medallion-wrap {
+      display: inline-block;
+      margin: 0 auto 16px;
+      position: relative;
+    }
+
+    .medallion-oval {
+      width: 140px;
+      height: 170px;
+      margin: 0 auto;
+      border: 1.5px solid var(--sepia-main);
+      border-radius: 50% / 45%;
+      padding: 6px;
+      background: var(--bg-card-inner);
+      box-shadow: 0 4px 18px rgba(122, 74, 46, 0.12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .medallion-oval::after {
+      content: '';
+      position: absolute;
+      inset: -7px;
+      border-radius: 50% / 45%;
+      border: 1px dashed var(--sepia-soft);
+      opacity: 0.6;
+    }
+
+    .krishna-svg {
+      width: 100%;
+      height: 100%;
+      stroke: var(--sepia-dark);
+      stroke-width: 1.2;
+      fill: none;
+      object-fit: contain;
+    }
+
+    .heading-hare-krishna {
+      font-family: var(--font-script);
+      font-size: 3.2rem;
+      font-weight: 500;
+      color: var(--sepia-dark);
+      line-height: 1.2;
+      margin: 8px 0 10px;
+      letter-spacing: 0.02em;
+    }
+
+    @media (max-width: 600px) {
+      .heading-hare-krishna {
+        font-size: 2.6rem;
+      }
+    }
+
+    /* Thin divider lines with ornamental motifs */
+    .ornamental-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin: 26px auto;
+      max-width: 480px;
+      width: 100%;
+    }
+
+    .divider-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--sepia-soft), transparent);
+    }
+
+    .divider-motif {
+      width: 24px;
+      height: 24px;
+      fill: var(--sepia-main);
+      opacity: 0.85;
+      flex-shrink: 0;
+    }
+
+    /* ==========================================================================
+       2. ANNOUNCEMENT & COUPLE NAMES
+       ========================================================================== */
+    .announcement-section {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .announcement-intro {
+      font-family: var(--font-serif);
+      font-size: 1.22rem;
+      color: var(--sepia-dark);
+      max-width: 580px;
+      margin: 0 auto 18px;
+      font-style: italic;
+      line-height: 1.5;
+    }
+
+    .name-bride, .name-groom {
+      font-family: var(--font-script);
+      font-size: clamp(3.8rem, 8vw, 5.8rem);
+      line-height: 1.1;
+      color: var(--sepia-dark);
+      font-weight: normal;
+      text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.4);
+      margin: 2px 0;
+      display: block;
+      letter-spacing: 0.02em;
+    }
+
+    .marriage-bridge {
+      font-family: var(--font-serif);
+      font-size: 1.2rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--sepia-soft);
+      margin: 10px 0;
+      font-weight: 500;
+    }
+
+    .groom-parents-line {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      color: var(--sepia-main);
+      max-width: 520px;
+      margin: 12px auto 0;
+      line-height: 1.55;
+    }
+
+    /* ==========================================================================
+       3. COUPLE PORTRAIT & FLOATING PARALLAX EFFECT
+       ========================================================================== */
+    .portrait-section {
+      text-align: center;
+      margin: 44px 0;
+      perspective: 1000px;
+    }
+
+    .portrait-frame-wrap {
+      display: inline-block;
+      position: relative;
+      padding: 14px;
+      background: var(--bg-card-inner);
+      border: 1px solid var(--sepia-faint-border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lift);
+      transition: transform 0.4s var(--ease-silk);
+      max-width: 560px;
+      width: 100%;
+    }
+
+    .portrait-frame-wrap:hover {
+      transform: translateY(-6px) scale(1.01);
+    }
+
+    .portrait-image-container {
+      position: relative;
+      border-radius: calc(var(--radius-lg) - 8px);
+      overflow: hidden;
+      border: 1.5px solid var(--sepia-soft);
+      background: #EFE6D7;
+      aspect-ratio: 4 / 4.8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .portrait-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      filter: sepia(0.35) contrast(1.05) brightness(0.98);
+      transition: transform 0.7s var(--ease-silk), filter 0.5s ease;
+      display: block;
+    }
+
+    .portrait-frame-wrap:hover .portrait-img {
+      transform: scale(1.03);
+      filter: sepia(0.25) contrast(1.08) brightness(1);
+    }
+
+    .portrait-caption {
+      margin-top: 14px;
+      font-family: var(--font-serif);
+      font-size: 0.96rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--sepia-soft);
+      font-weight: 600;
+    }
+
+    /* Switcher between Cropped & Full Reference Card */
+    .view-card-toggle {
+      margin-top: 10px;
+      background: none;
+      border: none;
+      color: var(--sepia-main);
+      font-family: var(--font-serif);
+      font-size: 0.95rem;
+      text-decoration: underline;
+      cursor: pointer;
+      padding: 4px 8px;
+    }
+
+    .view-card-toggle:hover {
+      color: var(--sepia-dark);
+    }
+
+    /* ==========================================================================
+       4. EVENT DETAILS: 4-COLUMN CARDS WITH LINE ICONS
+       ========================================================================== */
+    .event-details-section {
+      margin: 48px 0;
+    }
+
+    .details-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      border-top: 1px solid var(--sepia-faint-border);
+      border-bottom: 1px solid var(--sepia-faint-border);
+      position: relative;
+    }
+
+    .detail-card {
+      padding: 28px 18px;
+      text-align: center;
+      position: relative;
+      transition: background 0.3s ease, transform 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+
+    .detail-card:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 15%;
+      bottom: 15%;
+      right: 0;
+      width: 1px;
+      background: var(--sepia-faint-border);
+    }
+
+    .detail-card:hover {
+      background: var(--sepia-faint);
+      transform: translateY(-3px);
+    }
+
+    .detail-icon-wrap {
+      width: 52px;
+      height: 52px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      border: 1px solid var(--sepia-soft);
+      background: var(--bg-card-inner);
+      color: var(--sepia-main);
+    }
+
+    .detail-card-title {
+      font-family: var(--font-serif);
+      font-size: 0.95rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--sepia-dark);
+      margin-bottom: 8px;
+    }
+
+    .detail-card-value {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--sepia-main);
+      line-height: 1.4;
+      margin-bottom: 4px;
+    }
+
+    .detail-card-sub {
+      font-size: 0.95rem;
+      color: var(--sepia-soft);
+      line-height: 1.35;
+    }
+
+    @media (max-width: 900px) {
+      .details-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .detail-card:nth-child(2)::after {
+        display: none;
+      }
+      .detail-card:nth-child(-n+2) {
+        border-bottom: 1px solid var(--sepia-faint-border);
+      }
+    }
+
+    @media (max-width: 560px) {
+      .details-grid {
+        grid-template-columns: 1fr;
+      }
+      .detail-card::after {
+        display: none !important;
+      }
+      .detail-card:not(:last-child) {
+        border-bottom: 1px solid var(--sepia-faint-border);
+      }
+    }
+
+    /* ==========================================================================
+       5. LIVE COUNTDOWN SECTION
+       ========================================================================== */
+    .countdown-section {
+      text-align: center;
+      margin: 48px auto;
+      max-width: 680px;
+    }
+
+    .countdown-label {
+      font-family: var(--font-serif);
+      font-size: 1rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--sepia-soft);
+      margin-bottom: 18px;
+      font-weight: 600;
+    }
+
+    .countdown-timer-wrap {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .time-unit-box {
+      min-width: 92px;
+      padding: 16px 12px;
+      background: var(--bg-card-inner);
+      border: 1px solid var(--sepia-faint-border);
+      border-radius: var(--radius-sm);
+      box-shadow: 0 4px 15px rgba(74, 44, 26, 0.06);
+      transition: transform 0.25s ease;
+    }
+
+    .time-unit-box:hover {
+      transform: translateY(-2px);
+      border-color: var(--sepia-soft);
+    }
+
+    .time-number {
+      font-family: var(--font-title-serif);
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--sepia-dark);
+      line-height: 1;
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .time-label {
+      font-size: 0.8rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--sepia-soft);
+      font-weight: 600;
+    }
+
+    .countdown-celebration {
+      display: none;
+      font-family: var(--font-script);
+      font-size: 3.5rem;
+      color: var(--sepia-dark);
+      animation: pulse-gentle 2s infinite ease-in-out;
+    }
+
+    @media (max-width: 480px) {
+      .time-unit-box {
+        min-width: 72px;
+        padding: 12px 6px;
+      }
+      .time-number {
+        font-size: 2rem;
+      }
+    }
+
+    /* ==========================================================================
+       6. INVITATION MESSAGE
+       ========================================================================== */
+    .invitation-quote-section {
+      text-align: center;
+      margin: 44px auto;
+      max-width: 680px;
+      padding: 0 20px;
+    }
+
+    .quote-card {
+      position: relative;
+      padding: 24px 30px;
+      background: var(--bg-card-inner);
+      border-left: 2px solid var(--sepia-soft);
+      border-right: 2px solid var(--sepia-soft);
+      border-radius: var(--radius-sm);
+    }
+
+    .quote-text {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      line-height: 1.7;
+      color: var(--sepia-dark);
+      font-style: italic;
+    }
+
+    .quote-closing {
+      margin-top: 12px;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      font-size: 1.1rem;
+      color: var(--sepia-main);
+    }
+
+    /* ==========================================================================
+       7. ACTION BUTTONS: CALENDAR & MAPS
+       ========================================================================== */
+    .actions-section {
+      margin: 44px 0;
+      text-align: center;
+    }
+
+    .button-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 16px;
+      margin-top: 20px;
+    }
+
+    .btn-sepia {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 14px 26px;
+      border-radius: 40px;
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-decoration: none;
+      cursor: pointer;
+      transition: all 0.28s var(--ease-silk);
+      border: 1px solid var(--sepia-main);
+      background: var(--sepia-main);
+      color: #FAF6F0;
+      box-shadow: 0 5px 18px rgba(122, 74, 46, 0.22);
+    }
+
+    .btn-sepia:hover {
+      background: var(--sepia-dark);
+      border-color: var(--sepia-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(74, 44, 26, 0.3);
+    }
+
+    .btn-sepia-outline {
+      background: var(--bg-card-inner);
+      color: var(--sepia-main);
+      border: 1px solid var(--sepia-soft);
+      box-shadow: 0 4px 14px rgba(122, 74, 46, 0.08);
+    }
+
+    .btn-sepia-outline:hover {
+      background: var(--sepia-main);
+      color: #FAF6F0;
+      border-color: var(--sepia-main);
+    }
+
+    /* ==========================================================================
+       8. VENUE LOCATION GUIDANCE CARDS
+       ========================================================================== */
+    .locations-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 22px;
+      margin: 32px 0;
+      text-align: left;
+    }
+
+    .venue-card {
+      background: var(--bg-card-inner);
+      border: 1px solid var(--sepia-faint-border);
+      border-radius: var(--radius-md);
+      padding: 24px;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .venue-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-soft);
+      border-color: var(--sepia-soft);
+    }
+
+    .venue-badge {
+      display: inline-block;
+      font-size: 0.78rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      font-weight: 700;
+      color: var(--sepia-soft);
+      margin-bottom: 8px;
+    }
+
+    .venue-name {
+      font-family: var(--font-title-serif);
+      font-size: 1.35rem;
+      color: var(--sepia-dark);
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .venue-desc {
+      font-size: 1rem;
+      color: var(--sepia-main);
+      margin-bottom: 18px;
+      line-height: 1.5;
+    }
+
+    /* ==========================================================================
+       9. RSVP FORM (Direct WhatsApp Dispatch)
+       ========================================================================== */
+    .rsvp-section {
+      margin: 50px auto 36px;
+      max-width: 640px;
+      background: var(--bg-card-inner);
+      border: 1px solid var(--sepia-faint-border);
+      border-radius: var(--radius-md);
+      padding: 36px 30px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .rsvp-header {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .rsvp-title {
+      font-family: var(--font-script);
+      font-size: 3rem;
+      color: var(--sepia-dark);
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+
+    .rsvp-subtitle {
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--sepia-soft);
+      font-weight: 600;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--sepia-dark);
+      margin-bottom: 8px;
+    }
+
+    .form-input, .form-select, .form-textarea {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1px solid var(--sepia-soft);
+      border-radius: var(--radius-sm);
+      background: var(--bg-cream);
+      color: var(--sepia-dark);
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      transition: border-color 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      border-color: var(--sepia-dark);
+      box-shadow: 0 0 0 3px var(--sepia-faint);
+      outline: none;
+    }
+
+    .radio-pill-group {
+      display: flex;
+      gap: 12px;
+    }
+
+    .radio-pill {
+      flex: 1;
+      position: relative;
+    }
+
+    .radio-pill input {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .radio-label-box {
+      display: block;
+      text-align: center;
+      padding: 12px;
+      border: 1px solid var(--sepia-soft);
+      border-radius: var(--radius-sm);
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--sepia-main);
+      background: var(--bg-cream);
+      transition: all 0.2s ease;
+    }
+
+    .radio-pill input:checked + .radio-label-box {
+      background: var(--sepia-main);
+      color: #FAF5EE;
+      border-color: var(--sepia-main);
+    }
+
+    /* ==========================================================================
+       10. SHARE BUTTON & TOAST NOTIFICATION
+       ========================================================================== */
+    .share-container {
+      text-align: center;
+      margin: 30px 0 10px;
+    }
+
+    .toast-msg {
+      position: fixed;
+      bottom: 85px;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+      background: var(--sepia-dark);
+      color: #FAF5EE;
+      padding: 12px 24px;
+      border-radius: 30px;
+      font-size: 0.95rem;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+      z-index: 1000;
+      opacity: 0;
+      pointer-events: none;
+      transition: all 0.3s var(--ease-silk);
+    }
+
+    .toast-msg.show {
+      opacity: 1;
+      transform: translateX(-50%) translateY(0);
+      pointer-events: auto;
+    }
+
+    /* ==========================================================================
+       11. FOOTER
+       ========================================================================== */
+    .invitation-footer {
+      text-align: center;
+      margin-top: 50px;
+      padding-top: 30px;
+      border-top: 1px solid var(--sepia-faint-border);
+    }
+
+    .footer-with-love {
+      font-family: var(--font-title-serif);
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--sepia-dark);
+      margin-bottom: 4px;
+    }
+
+    .footer-host-names {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--sepia-main);
+      margin-bottom: 4px;
+    }
+
+    .footer-address {
+      font-size: 1.05rem;
+      color: var(--sepia-soft);
+      margin-bottom: 10px;
+    }
+
+    .footer-phone-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--sepia-dark);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+      padding: 6px 14px;
+      border-radius: 20px;
+      border: 1px dashed var(--sepia-soft);
+      transition: all 0.25s ease;
+      background: var(--bg-card-inner);
+    }
+
+    .footer-phone-link:hover {
+      background: var(--sepia-main);
+      color: #FFFDF9;
+      border-style: solid;
+    }
+
+    .footer-hare-krishna {
+      font-family: var(--font-script);
+      font-size: 2.8rem;
+      color: var(--sepia-dark);
+      margin-top: 24px;
+      letter-spacing: 0.03em;
+    }
+
+    /* Modal for Full Card Preview */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(20, 14, 10, 0.88);
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .modal-overlay.open {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-content {
+      position: relative;
+      max-width: 900px;
+      max-height: 90vh;
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+      background: var(--bg-card);
+    }
+
+    .modal-content img {
+      width: 100%;
+      height: 100%;
+      max-height: 85vh;
+      object-fit: contain;
+      display: block;
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--sepia-dark);
+      color: #fff;
+      border: none;
+      font-size: 1.3rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ==========================================================================
+       REDUCED MOTION PREFERENCE
+       ========================================================================== */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .wax-seal-btn {
+        animation: none;
+      }
+      .corner-ornament {
+        animation: none !important;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Subtle Paper Grain Noise Overlay -->
+  <div class="paper-texture" aria-hidden="true"></div>
+
+  <!-- Falling Jasmine & Marigold Petals Canvas -->
+  <canvas id="petals-canvas" aria-hidden="true"></canvas>
+
+  <!-- ========================================================================
+       TOP FLOATING CONTROLS (Audio Mute Toggle & Petals Toggle)
+       ======================================================================== -->
+  <aside class="top-controls" aria-label="Page Controls">
+    <button id="petals-toggle-btn" class="control-btn" title="Toggle Falling Petals" aria-label="Toggle Falling Petals">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2z"></path>
+        <path d="M12 6a4 4 0 0 1 4 4c0 3-4 6-4 6s-4-3-4-6a4 4 0 0 1 4-4z"></path>
+      </svg>
+    </button>
+    <button id="audio-toggle-btn" class="control-btn" title="Toggle Temple Chimes (Muted)" aria-label="Toggle Temple Bell Chimes">
+      <!-- Muted Icon by default -->
+      <svg id="audio-icon-muted" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M11 5L6 9H2v6h4l5 4V5z"></path>
+        <line x1="23" y1="9" x2="17" y2="15"></line>
+        <line x1="17" y1="9" x2="23" y2="15"></line>
+      </svg>
+      <!-- Playing Icon (Hidden initially) -->
+      <svg id="audio-icon-playing" style="display:none;" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M11 5L6 9H2v6h4l5 4V5z"></path>
+        <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+      </svg>
+    </button>
+  </aside>
+
+  <!-- ========================================================================
+       STICKY MINI-NAV FOR MOBILE & DESKTOP QUICK NAVIGATION
+       ======================================================================== -->
+  <nav class="sticky-mini-nav" aria-label="Invitation Navigation">
+    <a href="#header" class="nav-dot active">Home</a>
+    <a href="#couple" class="nav-dot">Couple</a>
+    <a href="#details" class="nav-dot">Details</a>
+    <a href="#countdown" class="nav-dot">Countdown</a>
+    <a href="#venue" class="nav-dot">Venue</a>
+    <a href="#rsvp" class="nav-dot">RSVP</a>
+  </nav>
+
+  <!-- ========================================================================
+       OPENING EXPERIENCE (Interactive Envelope / Temple Entry Curtain)
+       ======================================================================== -->
+  <div id="intro-curtain" class="intro-curtain" role="dialog" aria-modal="true" aria-label="Wedding Invitation Envelope">
+    <div class="envelope-box" id="envelope-trigger">
+      <div class="envelope-border"></div>
+      
+      <div class="envelope-icon-wrap">
+        <!-- Auspicious Kalash / Temple Bell Line Art SVG -->
+        <svg width="46" height="46" viewBox="0 0 64 64" fill="none" stroke="var(--sepia-main)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <!-- Traditional Bell Motif -->
+          <path d="M32 6v6"></path>
+          <path d="M26 12h12"></path>
+          <path d="M22 20c0-6 4-8 10-8s10 2 10 8c0 8 6 18 10 24H12c4-6 10-16 10-24z"></path>
+          <path d="M10 44h44v4H10z"></path>
+          <circle cx="32" cy="53" r="4"></circle>
+          <path d="M32 48v2"></path>
+        </svg>
+      </div>
+
+      <div class="intro-script-greeting">Hare Krishna</div>
+      <p class="intro-subtext">Wedding Invitation</p>
+      
+      <h2 style="font-family: var(--font-script); font-size: 3rem; color: var(--sepia-dark); margin-bottom: 12px; font-weight: normal;">
+        Navitha &amp; Shahin
+      </h2>
+
+      <p style="font-size: 1.05rem; color: var(--sepia-soft); margin-bottom: 26px; font-style: italic;">
+        Monday, November 16, 2026<br>
+        Guruvayur Sreekrishna Temple
+      </p>
+
+      <button id="open-envelope-btn" class="wax-seal-btn" type="button">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20 12V8H6a2 2 0 0 1-2-2c0-1.1.9-2 2-2h12v4"></path>
+          <path d="M4 6v12c0 1.1.9 2 2 2h14v-4"></path>
+          <path d="M18 12a2 2 0 0 0-2 2c0 1.1.9 2 2 2h4v-4h-4z"></path>
+        </svg>
+        Tap to Open
+      </button>
+
+      <div class="audio-notice">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M11 5L6 9H2v6h4l5 4V5z"></path>
+          <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+        </svg>
+        <span>Includes soft traditional temple bells</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MAIN CARD CONTAINER (Sepia Line-Art Parchment)
+       ======================================================================== -->
+  <main class="card-page">
+    <article class="invitation-frame">
+
+      <!-- Double Inner Framing Line -->
+      <div class="inner-border-line" aria-hidden="true"></div>
+      <div class="inner-border-thin" aria-hidden="true"></div>
+
+      <!-- INTRICATE BOTANICAL CORNER ORNAMENTS (Roses, Jasmine & Leaves) -->
+      <!-- Top Left -->
+      <svg class="corner-ornament corner-tl" viewBox="0 0 120 120" aria-hidden="true">
+        <path d="M6,6 Q6,60 30,85 Q45,100 80,105" stroke-width="1.3"></path>
+        <path d="M6,6 Q60,6 85,30 Q100,45 105,80" stroke-width="1.3"></path>
+        <!-- Corner Rose Blossom -->
+        <circle cx="28" cy="28" r="14" stroke-width="1.2"></circle>
+        <path d="M22,28 C22,22 34,22 34,28 C34,34 22,34 25,28" stroke-width="1.1"></path>
+        <path d="M20,24 C24,18 32,18 36,24" stroke-width="1"></path>
+        <path d="M20,32 C24,38 32,38 36,32" stroke-width="1"></path>
+        <!-- Jasmine Florets -->
+        <circle cx="68" cy="22" r="5" stroke-width="1.1"></circle>
+        <path d="M68,14 L68,30 M60,22 L76,22" stroke-width="0.9"></path>
+        <circle cx="22" cy="68" r="5" stroke-width="1.1"></circle>
+        <path d="M22,14 L22,30 M14,68 L30,68" stroke-width="0.9"></path>
+        <!-- Leaves and curling tendrils -->
+        <path d="M38,40 Q55,50 60,70 Q45,65 38,40" stroke-width="1"></path>
+        <path d="M40,38 Q50,55 70,60 Q65,45 40,38" stroke-width="1"></path>
+        <path d="M78,22 Q95,20 102,10" stroke-width="1"></path>
+        <path d="M22,78 Q20,95 10,102" stroke-width="1"></path>
+      </svg>
+
+      <!-- Top Right -->
+      <svg class="corner-ornament corner-tr" viewBox="0 0 120 120" aria-hidden="true">
+        <path d="M6,6 Q6,60 30,85 Q45,100 80,105" stroke-width="1.3"></path>
+        <path d="M6,6 Q60,6 85,30 Q100,45 105,80" stroke-width="1.3"></path>
+        <circle cx="28" cy="28" r="14" stroke-width="1.2"></circle>
+        <path d="M22,28 C22,22 34,22 34,28 C34,34 22,34 25,28" stroke-width="1.1"></path>
+        <path d="M20,24 C24,18 32,18 36,24" stroke-width="1"></path>
+        <path d="M20,32 C24,38 32,38 36,32" stroke-width="1"></path>
+        <circle cx="68" cy="22" r="5" stroke-width="1.1"></circle>
+        <path d="M68,14 L68,30 M60,22 L76,22" stroke-width="0.9"></path>
+        <circle cx="22" cy="68" r="5" stroke-width="1.1"></circle>
+        <path d="M22,14 L22,30 M14,68 L30,68" stroke-width="0.9"></path>
+        <path d="M38,40 Q55,50 60,70 Q45,65 38,40" stroke-width="1"></path>
+        <path d="M40,38 Q50,55 70,60 Q65,45 40,38" stroke-width="1"></path>
+        <path d="M78,22 Q95,20 102,10" stroke-width="1"></path>
+        <path d="M22,78 Q20,95 10,102" stroke-width="1"></path>
+      </svg>
+
+      <!-- Bottom Left -->
+      <svg class="corner-ornament corner-bl" viewBox="0 0 120 120" aria-hidden="true">
+        <path d="M6,6 Q6,60 30,85 Q45,100 80,105" stroke-width="1.3"></path>
+        <path d="M6,6 Q60,6 85,30 Q100,45 105,80" stroke-width="1.3"></path>
+        <circle cx="28" cy="28" r="14" stroke-width="1.2"></circle>
+        <path d="M22,28 C22,22 34,22 34,28 C34,34 22,34 25,28" stroke-width="1.1"></path>
+        <path d="M20,24 C24,18 32,18 36,24" stroke-width="1"></path>
+        <path d="M20,32 C24,38 32,38 36,32" stroke-width="1"></path>
+        <circle cx="68" cy="22" r="5" stroke-width="1.1"></circle>
+        <path d="M68,14 L68,30 M60,22 L76,22" stroke-width="0.9"></path>
+        <circle cx="22" cy="68" r="5" stroke-width="1.1"></circle>
+        <path d="M22,14 L22,30 M14,68 L30,68" stroke-width="0.9"></path>
+        <path d="M38,40 Q55,50 60,70 Q45,65 38,40" stroke-width="1"></path>
+        <path d="M40,38 Q50,55 70,60 Q65,45 40,38" stroke-width="1"></path>
+        <path d="M78,22 Q95,20 102,10" stroke-width="1"></path>
+        <path d="M22,78 Q20,95 10,102" stroke-width="1"></path>
+      </svg>
+
+      <!-- Bottom Right -->
+      <svg class="corner-ornament corner-br" viewBox="0 0 120 120" aria-hidden="true">
+        <path d="M6,6 Q6,60 30,85 Q45,100 80,105" stroke-width="1.3"></path>
+        <path d="M6,6 Q60,6 85,30 Q100,45 105,80" stroke-width="1.3"></path>
+        <circle cx="28" cy="28" r="14" stroke-width="1.2"></circle>
+        <path d="M22,28 C22,22 34,22 34,28 C34,34 22,34 25,28" stroke-width="1.1"></path>
+        <path d="M20,24 C24,18 32,18 36,24" stroke-width="1"></path>
+        <path d="M20,32 C24,38 32,38 36,32" stroke-width="1"></path>
+        <circle cx="68" cy="22" r="5" stroke-width="1.1"></circle>
+        <path d="M68,14 L68,30 M60,22 L76,22" stroke-width="0.9"></path>
+        <circle cx="22" cy="68" r="5" stroke-width="1.1"></circle>
+        <path d="M22,14 L22,30 M14,68 L30,68" stroke-width="0.9"></path>
+        <path d="M38,40 Q55,50 60,70 Q45,65 38,40" stroke-width="1"></path>
+        <path d="M40,38 Q50,55 70,60 Q65,45 40,38" stroke-width="1"></path>
+        <path d="M78,22 Q95,20 102,10" stroke-width="1"></path>
+        <path d="M22,78 Q20,95 10,102" stroke-width="1"></path>
+      </svg>
+
+
+      <!-- ====================================================================
+           1. HEADER: LAUREL-WREATH & RADHA-KRISHNA ILLUSTRATION
+           ==================================================================== -->
+      <header id="header" class="header-section reveal-section">
+        <div class="medallion-wrap">
+          <div class="medallion-oval">
+            <!-- Detailed Sepia Line-Art Radha-Krishna Vignette -->
+            <svg class="krishna-svg" viewBox="0 0 120 145" aria-label="Radha Krishna Divine Couple Illustration">
+              <!-- Laurel Wreath surrounding the oval -->
+              <g stroke="var(--sepia-soft)" stroke-width="1" fill="none">
+                <path d="M12,70 C10,40 28,16 60,14 C92,16 110,40 108,70 C106,105 88,132 60,134 C32,132 14,105 12,70 Z"></path>
+                <!-- Delicate laurel leaves along outer perimeter -->
+                <path d="M15,50 Q10,42 16,36 Q22,44 15,50"></path>
+                <path d="M22,34 Q20,24 28,20 Q32,28 22,34"></path>
+                <path d="M35,22 Q38,12 48,12 Q48,22 35,22"></path>
+                <path d="M85,22 Q82,12 72,12 Q72,22 85,22"></path>
+                <path d="M98,34 Q100,24 92,20 Q88,28 98,34"></path>
+                <path d="M105,50 Q110,42 104,36 Q98,44 105,50"></path>
+              </g>
+
+              <!-- Line-Art Figures of Krishna (left) and Radha (right) with Flute & Crown -->
+              <g stroke="var(--sepia-dark)" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" fill="none">
+                <!-- Krishna's Crown (Mukut) & Peacock Feather -->
+                <path d="M42,38 L54,38 L48,26 Z"></path>
+                <path d="M48,26 C46,20 48,14 54,16 C57,18 55,24 50,25"></path>
+                <circle cx="52" cy="18" r="1.5" fill="var(--sepia-dark)"></circle>
+                
+                <!-- Krishna's Profile & Hair -->
+                <path d="M44,38 C38,40 37,50 43,56 C44,60 48,63 52,63"></path>
+                <path d="M48,46 Q51,48 50,51"></path> <!-- Eye / Tilak -->
+                <line x1="49" y1="39" x2="49" y2="44" stroke-width="1.4"></line> <!-- Tilak -->
+
+                <!-- Radha's Veil (Odhni) & Profile -->
+                <path d="M76,38 C84,42 86,56 80,64"></path>
+                <path d="M74,38 C68,40 66,48 70,54 C72,58 76,61 80,61"></path>
+                <circle cx="78" cy="40" r="1.5" fill="var(--sepia-dark)"></circle> <!-- Maang Tikka -->
+                <path d="M72,46 Q74,48 73,50"></path> <!-- Radha's Eye -->
+
+                <!-- Divine Flute (Bansuri) held together -->
+                <line x1="34" y1="62" x2="86" y2="54" stroke-width="1.8"></line>
+                <circle cx="48" cy="59" r="1.2" fill="var(--sepia-dark)"></circle>
+                <circle cx="56" cy="58" r="1.2" fill="var(--sepia-dark)"></circle>
+                <circle cx="64" cy="57" r="1.2" fill="var(--sepia-dark)"></circle>
+
+                <!-- Hands in Blessing & Gracious Garlands -->
+                <path d="M42,66 C42,75 48,82 60,84 C72,82 78,75 78,66"></path>
+                <path d="M50,70 Q60,78 70,70"></path>
+                <!-- Lotus base below -->
+                <path d="M40,94 C46,88 54,88 60,94 C66,88 74,88 80,94 C74,102 66,104 60,100 C54,104 46,102 40,94 Z"></path>
+              </g>
+            </svg>
+          </div>
+        </div>
+
+        <h1 class="heading-hare-krishna">Hare Krishna</h1>
+
+        <div class="ornamental-divider" aria-hidden="true">
+          <span class="divider-line"></span>
+          <!-- Traditional Lotus Motif -->
+          <svg class="divider-motif" viewBox="0 0 24 24">
+            <path d="M12 3c1.5 3.5 4.5 6 8 7-3.5 1-6 4-7 8-1-4-3.5-7-7-8 3.5-1 6.5-3.5 8-7z"></path>
+          </svg>
+          <span class="divider-line"></span>
+        </div>
+      </header>
+
+
+      <!-- ====================================================================
+           2. ANNOUNCEMENT: BRIDE & GROOM
+           ==================================================================== -->
+      <section class="announcement-section reveal-section" aria-label="Wedding Announcement">
+        <p class="announcement-intro">
+          Dear Friends and Family,<br>
+          We are pleased to announce the marriage of our daughter
+        </p>
+
+        <strong class="name-bride" id="bride-name-display">Navitha</strong>
+        
+        <p class="marriage-bridge">is getting married to</p>
+        
+        <strong class="name-groom" id="groom-name-display">Shahin</strong>
+
+        <p class="groom-parents-line">
+          S/o Maya CS<br>
+          Changanazhipadam House, Aroor, Alappuzha
+        </p>
+      </section>
+
+
+      <!-- ====================================================================
+           3. COUPLE PORTRAIT ILLUSTRATION
+           ==================================================================== -->
+      <section id="couple" class="portrait-section reveal-section" aria-label="Portrait of Navitha and Shahin">
+        <div class="portrait-frame-wrap" id="portrait-frame">
+          <div class="portrait-image-container">
+            <!-- Line-art couple portrait extracted directly from card reference -->
+            <img 
+              id="couple-img-slot"
+              class="portrait-img" 
+              src="couple-transparent.png" 
+              alt="Sepia line-art illustration of Navitha and Shahin smiling arm in arm"
+              onerror="this.onerror=null; this.src='couple-reference.jpg';"
+              style="object-fit: contain; filter: drop-shadow(0 12px 24px rgba(74, 44, 26, 0.15));"
+            >
+          </div>
+          <p class="portrait-caption">Navitha &amp; Shahin</p>
+          <button type="button" class="view-card-toggle" id="view-card-modal-btn">
+            View original invitation card reference &rarr;
+          </button>
+        </div>
+      </section>
+
+
+      <!-- ====================================================================
+           4. EVENT DETAILS: 4-COLUMN CARDS WITH LINE ICONS
+           ==================================================================== -->
+      <section id="details" class="event-details-section reveal-section" aria-label="Event Details">
+        <div class="details-grid">
+          
+          <!-- Card 1: Wedding Day -->
+          <div class="detail-card">
+            <div class="detail-icon-wrap" aria-hidden="true">
+              <!-- Calendar Line Icon with '16' -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+                <text x="12" y="18" font-size="7.5" font-weight="bold" fill="currentColor" text-anchor="middle" stroke="none">16</text>
+              </svg>
+            </div>
+            <h3 class="detail-card-title">Wedding Day</h3>
+            <div class="detail-card-value">November 16, 2026</div>
+            <div class="detail-card-sub">Monday<br>Malayalam date: Thulam 30, 1201</div>
+          </div>
+
+          <!-- Card 2: Muhurtham -->
+          <div class="detail-card">
+            <div class="detail-icon-wrap" aria-hidden="true">
+              <!-- Clock Line Icon -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </div>
+            <h3 class="detail-card-title">Muhurtham</h3>
+            <div class="detail-card-value">9:30 – 9:45 AM</div>
+            <div class="detail-card-sub">Auspicious Morning<br>Indian Standard Time</div>
+          </div>
+
+          <!-- Card 3: Thalikettu -->
+          <div class="detail-card">
+            <div class="detail-icon-wrap" aria-hidden="true">
+              <!-- Traditional Thali / Sacred Necklace Line Icon -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 4c0 6 3 11 7 11s7-5 7-11"></path>
+                <circle cx="12" cy="18" r="2.5"></circle>
+                <line x1="12" y1="15" x2="12" y2="15.5"></line>
+              </svg>
+            </div>
+            <h3 class="detail-card-title">Thalikettu</h3>
+            <div class="detail-card-value">Guruvayur</div>
+            <div class="detail-card-sub">Sreekrishna Temple<br>Sacred Nuptial Knot</div>
+          </div>
+
+          <!-- Card 4: Wedding Venue / Auditorium -->
+          <div class="detail-card">
+            <div class="detail-icon-wrap" aria-hidden="true">
+              <!-- Auditorium / Mandapam Building Line Icon -->
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 21h18"></path>
+                <path d="M4 11v10"></path>
+                <path d="M8 11v10"></path>
+                <path d="M12 11v10"></path>
+                <path d="M16 11v10"></path>
+                <path d="M20 11v10"></path>
+                <path d="M12 3l9 6H3l9-6z"></path>
+                <path d="M3 9h18v2H3z"></path>
+              </svg>
+            </div>
+            <h3 class="detail-card-title">Wedding Venue</h3>
+            <div class="detail-card-value">King Auditorium</div>
+            <div class="detail-card-sub">Thalikulam<br>Marriage Assembly &amp; Feast</div>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- ====================================================================
+           5. LIVE COUNTDOWN TO NOVEMBER 16, 2026, 9:30 AM IST
+           ==================================================================== -->
+      <section id="countdown" class="countdown-section reveal-section" aria-label="Wedding Countdown">
+        <p class="countdown-label">Counting Down to the Auspicious Hour</p>
+        
+        <div class="countdown-timer-wrap" id="countdown-wrap">
+          <div class="time-unit-box">
+            <span class="time-number" id="count-days">00</span>
+            <span class="time-label">Days</span>
+          </div>
+          <div class="time-unit-box">
+            <span class="time-number" id="count-hours">00</span>
+            <span class="time-label">Hours</span>
+          </div>
+          <div class="time-unit-box">
+            <span class="time-number" id="count-minutes">00</span>
+            <span class="time-label">Mins</span>
+          </div>
+          <div class="time-unit-box">
+            <span class="time-number" id="count-seconds">00</span>
+            <span class="time-label">Secs</span>
+          </div>
+        </div>
+
+        <div class="countdown-celebration" id="count-celebration">
+          Today we celebrate! 🎉
+        </div>
+      </section>
+
+
+      <!-- ====================================================================
+           6. INVITATION MESSAGE
+           ==================================================================== -->
+      <section class="invitation-quote-section reveal-section" aria-label="Cordially Invited">
+        <div class="ornamental-divider" aria-hidden="true">
+          <span class="divider-line"></span>
+          <svg class="divider-motif" viewBox="0 0 24 24">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M12 2v4M12 18v4M2 12h4M18 12h4"></path>
+          </svg>
+          <span class="divider-line"></span>
+        </div>
+
+        <blockquote class="quote-card">
+          <p class="quote-text">
+            “You are cordially invited with your family to witness and bless the bridal couple and attend the subsequent marriage assembly.”
+          </p>
+          <p class="quote-closing">
+            We seek your valued presence.
+          </p>
+        </blockquote>
+      </section>
+
+
+      <!-- ====================================================================
+           7 & 8. ADD TO CALENDAR & LOCATION BUTTONS
+           ==================================================================== -->
+      <section id="venue" class="actions-section reveal-section" aria-label="Calendar and Location">
+        
+        <!-- Add to Calendar Buttons -->
+        <div class="button-group">
+          <button id="download-ics-btn" class="btn-sepia" type="button">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+              <path d="M12 14v4M10 16l2 2 2-2"></path>
+            </svg>
+            Add to Calendar (.ics)
+          </button>
+
+          <a id="google-cal-btn" class="btn-sepia btn-sepia-outline" target="_blank" rel="noopener noreferrer" href="#">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+              <polyline points="15 3 21 3 21 9"></polyline>
+              <line x1="10" y1="14" x2="21" y2="3"></line>
+            </svg>
+            Google Calendar
+          </a>
+        </div>
+
+        <!-- Venue Navigation Cards -->
+        <div class="locations-grid">
+          
+          <!-- Venue 1: Guruvayur Temple -->
+          <div class="venue-card">
+            <div>
+              <span class="venue-badge">Ceremony • 9:30 AM</span>
+              <h4 class="venue-name">Guruvayur Sreekrishna Temple</h4>
+              <p class="venue-desc">
+                The sacred Thalikettu solemnization at the Holy Abode of Lord Guruvayurappan.
+              </p>
+            </div>
+            <a 
+              href="https://www.google.com/maps/search/?api=1&query=Guruvayur+Sreekrishna+Temple" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="btn-sepia btn-sepia-outline"
+              style="width: 100%;"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              Open Guruvayur Temple in Maps
+            </a>
+          </div>
+
+          <!-- Venue 2: King Auditorium -->
+          <div class="venue-card">
+            <div>
+              <span class="venue-badge">Assembly &amp; Sadya • Following Ceremony</span>
+              <h4 class="venue-name">King Auditorium</h4>
+              <p class="venue-desc">
+                Marriage assembly, congratulations, and traditional Kerala wedding feast at Thalikulam.
+              </p>
+            </div>
+            <a 
+              href="https://www.google.com/maps/search/?api=1&query=King+Auditorium+Thalikulam" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              class="btn-sepia btn-sepia-outline"
+              style="width: 100%;"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              Open King Auditorium in Maps
+            </a>
+          </div>
+
+        </div>
+
+      </section>
+
+
+      <!-- ====================================================================
+           9. RSVP FORM (WhatsApp Direct Dispatch)
+           ==================================================================== -->
+      <section id="rsvp" class="rsvp-section reveal-section" aria-label="RSVP Response">
+        <div class="rsvp-header">
+          <h3 class="rsvp-title">R. S. V. P.</h3>
+          <p class="rsvp-subtitle">Please confirm your esteemed presence</p>
+        </div>
+
+        <form id="rsvp-form">
+          <div class="form-group">
+            <label class="form-label" for="rsvp-name">Your Full Name</label>
+            <input class="form-input" type="text" id="rsvp-name" required placeholder="e.g. Dr. Rajesh Kumar & Family">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label">Will you be attending?</label>
+            <div class="radio-pill-group">
+              <div class="radio-pill">
+                <input type="radio" id="attend-yes" name="attendance" value="Yes, joyfully attending" checked>
+                <label class="radio-label-box" for="attend-yes">Joyfully Attend</label>
+              </div>
+              <div class="radio-pill">
+                <input type="radio" id="attend-no" name="attendance" value="Regretfully declining with best wishes">
+                <label class="radio-label-box" for="attend-no">Send Blessings</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="rsvp-guests">Number of Guests</label>
+            <select class="form-select" id="rsvp-guests">
+              <option value="1 Guest">1 Guest</option>
+              <option value="2 Guests" selected>2 Guests</option>
+              <option value="3 Guests">3 Guests</option>
+              <option value="4+ Family">4+ Family Members</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="rsvp-blessing">Blessing &amp; Message for Navitha &amp; Shahin</label>
+            <textarea class="form-textarea" id="rsvp-blessing" rows="3" placeholder="Wishing you a lifetime of endless joy, love and harmony..."></textarea>
+          </div>
+
+          <button type="submit" class="btn-sepia" style="width: 100%;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
+            </svg>
+            Send RSVP via WhatsApp
+          </button>
+        </form>
+      </section>
+
+
+      <!-- ====================================================================
+           10. SHARE INVITATION
+           ==================================================================== -->
+      <div class="share-container reveal-section">
+        <button id="share-invite-btn" class="btn-sepia btn-sepia-outline" type="button">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="18" cy="5" r="3"></circle>
+            <circle cx="6" cy="12" r="3"></circle>
+            <circle cx="18" cy="19" r="3"></circle>
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+          </svg>
+          Share this Invitation
+        </button>
+      </div>
+
+
+      <!-- ====================================================================
+           11. FOOTER: FAMILY SIGN-OFF & TELEPHONE
+           ==================================================================== -->
+      <footer class="invitation-footer reveal-section">
+        <p class="footer-with-love">With Love,</p>
+        <p class="footer-host-names">Gopinathan NL &amp; Vidhya Gopinathan</p>
+        <p class="footer-address">Nambi House, Thambankadavu p.o</p>
+
+        <p style="margin-top: 14px;">
+          <a class="footer-phone-link" href="tel:+917594950818">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+            </svg>
+            Mob: 75 94 95 08 18
+          </a>
+        </p>
+
+        <p class="footer-hare-krishna">Hare Krishna</p>
+      </footer>
+
+    </article>
+  </main>
+
+
+  <!-- Modal for Full Original Card View -->
+  <div id="card-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-label="Reference Wedding Card">
+    <div class="modal-content">
+      <button id="modal-close-btn" class="modal-close-btn" aria-label="Close dialog">&times;</button>
+      <img src="couple-reference.jpg" alt="Original Sepia Line-Art Wedding Card">
+    </div>
+  </div>
+
+  <!-- Toast Notification Feedback -->
+  <div id="toast" class="toast-msg" role="status" aria-live="polite">Link copied to clipboard!</div>
+
+
+  <!-- ========================================================================
+       JAVASCRIPT CONFIG & INTERACTION ENGINE
+       ======================================================================== -->
+  <script>
+    /**
+     * ========================================================================
+     * CENTRAL EDITABLE CONFIGURATION OBJECT
+     * Easily modify names, dates, venues, telephone and links here!
+     * ========================================================================
+     */
+    const WEDDING_CONFIG = {
+      bride: "Navitha",
+      groom: "Shahin",
+      parentsBride: "Gopinathan NL & Vidhya Gopinathan",
+      parentsGroom: "Maya CS",
+      groomResidence: "Changanazhipadam House, Aroor, Alappuzha",
+      brideResidence: "Nambi House, Thambankadavu p.o",
+      
+      // Date & Time
+      eventDateDisplay: "November 16, 2026, Monday",
+      malayalamDate: "Thulam 30, 1201",
+      muhurtham: "9:30 – 9:45 AM",
+      countdownTargetISO: "2026-11-16T09:30:00+05:30", // Nov 16, 2026 9:30 AM IST
+      
+      // Venues
+      templeVenue: "Guruvayur Sreekrishna Temple",
+      auditoriumVenue: "King Auditorium, Thalikulam",
+      
+      // Contacts
+      phoneDisplay: "75 94 95 08 18",
+      phoneDial: "+917594950818",
+      whatsappNumber: "917594950818",
+      
+      // Maps
+      mapTempleUrl: "https://www.google.com/maps/search/?api=1&query=Guruvayur+Sreekrishna+Temple",
+      mapAuditoriumUrl: "https://www.google.com/maps/search/?api=1&query=King+Auditorium+Thalikulam",
+
+      // Share Info
+      shareTitle: "Wedding Invitation | Navitha & Shahin",
+      shareText: "Join us in celebrating the wedding of Navitha & Shahin on November 16, 2026 at Guruvayur Sreekrishna Temple!"
+    };
+
+    /* ------------------------------------------------------------------------
+       1. SYNTHESIZED TEMPLE BELL SOUND (Web Audio API - 100% Offline & Reliable)
+       ------------------------------------------------------------------------ */
+    let audioCtx = null;
+    let isSoundMuted = true; // Off by default as required
+
+    function playTempleBell() {
+      if (isSoundMuted) return;
+      try {
+        if (!audioCtx) {
+          const AudioContext = window.AudioContext || window.webkitAudioContext;
+          audioCtx = new AudioContext();
+        }
+        if (audioCtx.state === 'suspended') {
+          audioCtx.resume();
+        }
+
+        const now = audioCtx.currentTime;
+
+        // Fundamental frequencies replicating auspicious Kerala temple bronze bell
+        const harmonics = [587.33, 1174.66, 1760.00, 2349.32, 2960.0];
+        const gains = [0.4, 0.25, 0.15, 0.08, 0.04];
+
+        harmonics.forEach((freq, idx) => {
+          const osc = audioCtx.createOscillator();
+          const gainNode = audioCtx.createGain();
+
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(freq, now);
+
+          // Bell strike envelope: Instant attack, slow resonant exponential decay
+          gainNode.gain.setValueAtTime(0.001, now);
+          gainNode.gain.exponentialRampToValueAtTime(gains[idx], now + 0.02);
+          gainNode.gain.exponentialRampToValueAtTime(0.0001, now + 3.5);
+
+          osc.connect(gainNode);
+          gainNode.connect(audioCtx.destination);
+
+          osc.start(now);
+          osc.stop(now + 3.6);
+        });
+      } catch (err) {
+        console.warn("Audio Context note:", err);
+      }
+    }
+
+    // Audio Button Toggle
+    const audioToggleBtn = document.getElementById('audio-toggle-btn');
+    const audioMutedIcon = document.getElementById('audio-icon-muted');
+    const audioPlayingIcon = document.getElementById('audio-icon-playing');
+
+    function updateAudioUI() {
+      if (isSoundMuted) {
+        audioMutedIcon.style.display = 'block';
+        audioPlayingIcon.style.display = 'none';
+        audioToggleBtn.title = "Temple Bell Sound (Muted) - Click to Enable";
+      } else {
+        audioMutedIcon.style.display = 'none';
+        audioPlayingIcon.style.display = 'block';
+        audioToggleBtn.title = "Temple Bell Sound (Playing) - Click to Mute";
+      }
+    }
+
+    audioToggleBtn.addEventListener('click', () => {
+      isSoundMuted = !isSoundMuted;
+      updateAudioUI();
+      if (!isSoundMuted) {
+        playTempleBell();
+        showToast("Temple bell audio enabled 🔔");
+      } else {
+        showToast("Temple bell audio muted");
+      }
+    });
+
+    /* ------------------------------------------------------------------------
+       2. ENVELOPE OPENING CEREMONY
+       ------------------------------------------------------------------------ */
+    const introCurtain = document.getElementById('intro-curtain');
+    const openEnvelopeBtn = document.getElementById('open-envelope-btn');
+    const envelopeTrigger = document.getElementById('envelope-trigger');
+
+    function openInvitation() {
+      // Trigger temple bell if unmuted or user allows
+      playTempleBell();
+      introCurtain.classList.add('opened');
+      
+      // Trigger staggered reveals of the sections inside the invitation
+      setTimeout(() => {
+        triggerScrollReveals();
+      }, 350);
+    }
+
+    openEnvelopeBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      openInvitation();
+    });
+
+    envelopeTrigger.addEventListener('click', () => {
+      openInvitation();
+    });
+
+    /* ------------------------------------------------------------------------
+       3. FALLING JASMINE & MARIGOLD PETALS (Lightweight Canvas Particle Engine)
+       ------------------------------------------------------------------------ */
+    const canvas = document.getElementById('petals-canvas');
+    const ctx = canvas.getContext('2d');
+    let petals = [];
+    let isPetalsActive = true;
+    let animFrameId = null;
+
+    function resizeCanvas() {
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    }
+    window.addEventListener('resize', resizeCanvas);
+    resizeCanvas();
+
+    class Petal {
+      constructor() {
+        this.reset(true);
+      }
+      reset(initial = false) {
+        this.x = Math.random() * canvas.width;
+        this.y = initial ? Math.random() * canvas.height : -20;
+        this.size = Math.random() * 8 + 6;
+        this.speedY = Math.random() * 0.9 + 0.6;
+        this.speedX = Math.random() * 0.8 - 0.4;
+        this.rotation = Math.random() * Math.PI * 2;
+        this.rotationSpeed = (Math.random() - 0.5) * 0.02;
+        this.opacity = Math.random() * 0.5 + 0.35;
+        // Predominantly jasmine white/cream with occasional subtle marigold gold
+        this.isMarigold = Math.random() < 0.25;
+      }
+      update() {
+        this.y += this.speedY;
+        this.x += Math.sin(this.y * 0.01) * 0.6 + this.speedX;
+        this.rotation += this.rotationSpeed;
+
+        if (this.y > canvas.height + 20) {
+          this.reset();
+        }
+      }
+      draw() {
+        ctx.save();
+        ctx.translate(this.x, this.y);
+        ctx.rotate(this.rotation);
+        ctx.globalAlpha = this.opacity;
+
+        if (this.isMarigold) {
+          ctx.fillStyle = '#D4A054';
+          ctx.strokeStyle = '#A67856';
+        } else {
+          // Jasmine petal: ivory cream with delicate sepia contour
+          ctx.fillStyle = '#FDFBF7';
+          ctx.strokeStyle = 'rgba(122, 74, 46, 0.4)';
+        }
+
+        ctx.lineWidth = 0.6;
+        ctx.beginPath();
+        // Delicate teardrop petal shape
+        ctx.moveTo(0, -this.size);
+        ctx.quadraticCurveTo(this.size * 0.6, 0, 0, this.size);
+        ctx.quadraticCurveTo(-this.size * 0.6, 0, 0, -this.size);
+        ctx.fill();
+        ctx.stroke();
+
+        ctx.restore();
+      }
+    }
+
+    // Initialize 28 petals (lightweight and fluid)
+    for (let i = 0; i < 28; i++) {
+      petals.push(new Petal());
+    }
+
+    function animatePetals() {
+      if (!isPetalsActive) return;
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let petal of petals) {
+        petal.update();
+        petal.draw();
+      }
+      animFrameId = requestAnimationFrame(animatePetals);
+    }
+    animatePetals();
+
+    const petalsToggleBtn = document.getElementById('petals-toggle-btn');
+    petalsToggleBtn.addEventListener('click', () => {
+      isPetalsActive = !isPetalsActive;
+      if (isPetalsActive) {
+        animatePetals();
+        showToast("Petal shower resumed 🌸");
+      } else {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        cancelAnimationFrame(animFrameId);
+        showToast("Petal shower paused");
+      }
+    });
+
+    /* ------------------------------------------------------------------------
+       4. SCROLL REVEALS & ACTIVE MINI-NAV TRACKER
+       ------------------------------------------------------------------------ */
+    const revealSections = document.querySelectorAll('.reveal-section');
+    const navDots = document.querySelectorAll('.nav-dot');
+
+    function triggerScrollReveals() {
+      const triggerBottom = window.innerHeight * 0.92;
+      revealSections.forEach(sec => {
+        const top = sec.getBoundingClientRect().top;
+        if (top < triggerBottom) {
+          sec.classList.add('revealed');
+        }
+      });
+
+      // Update active nav dot
+      const sections = ['header', 'couple', 'details', 'countdown', 'venue', 'rsvp'];
+      let currentSection = 'header';
+      sections.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+          const rect = el.getBoundingClientRect();
+          if (rect.top <= window.innerHeight * 0.45) {
+            currentSection = id;
+          }
+        }
+      });
+
+      navDots.forEach(dot => {
+        if (dot.getAttribute('href') === '#' + currentSection) {
+          dot.classList.add('active');
+        } else {
+          dot.classList.remove('active');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', triggerScrollReveals, { passive: true });
+    window.addEventListener('load', triggerScrollReveals);
+
+    /* ------------------------------------------------------------------------
+       5. LIVE COUNTDOWN TIMER (Nov 16, 2026, 9:30 AM IST)
+       ------------------------------------------------------------------------ */
+    const targetDate = new Date(WEDDING_CONFIG.countdownTargetISO).getTime();
+
+    const elDays = document.getElementById('count-days');
+    const elHours = document.getElementById('count-hours');
+    const elMinutes = document.getElementById('count-minutes');
+    const elSeconds = document.getElementById('count-seconds');
+    const countdownWrap = document.getElementById('countdown-wrap');
+    const celebrationMsg = document.getElementById('count-celebration');
+
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance < 0) {
+        if (countdownWrap) countdownWrap.style.display = 'none';
+        if (celebrationMsg) celebrationMsg.style.display = 'block';
+        return;
+      }
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      elDays.textContent = String(days).padStart(2, '0');
+      elHours.textContent = String(hours).padStart(2, '0');
+      elMinutes.textContent = String(minutes).padStart(2, '0');
+      elSeconds.textContent = String(seconds).padStart(2, '0');
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+
+    /* ------------------------------------------------------------------------
+       6. ADD TO CALENDAR (.ICS GENERATION & GOOGLE CALENDAR LINK)
+       ------------------------------------------------------------------------ */
+    function downloadICS() {
+      // Wedding: Nov 16, 2026, 09:30 AM IST to 02:00 PM IST
+      // In UTC: 09:30 AM IST (UTC+5:30) is 04:00 AM UTC
+      const icsData = [
+        "BEGIN:VCALENDAR",
+        "VERSION:2.0",
+        "PRODID:-//Navitha & Shahin//Wedding Invitation//EN",
+        "CALSCALE:GREGORIAN",
+        "METHOD:PUBLISH",
+        "BEGIN:VEVENT",
+        "UID:wedding-navitha-shahin-20261116@guruvayur",
+        "DTSTAMP:20261016T000000Z",
+        "DTSTART:20261116T040000Z",
+        "DTEND:20261116T083000Z",
+        "SUMMARY:Wedding Ceremony of Navitha & Shahin",
+        "DESCRIPTION:Thalikettu Muhurtham (9:30 - 9:45 AM) at Guruvayur Sreekrishna Temple\\, followed by the wedding assembly and feast at King Auditorium\\, Thalikulam. Contact: +91 7594950818.",
+        "LOCATION:Guruvayur Sreekrishna Temple & King Auditorium Thalikulam",
+        "STATUS:CONFIRMED",
+        "END:VEVENT",
+        "END:VCALENDAR"
+      ].join("\r\n");
+
+      const blob = new Blob([icsData], { type: 'text/calendar;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.setAttribute('download', 'Navitha-Shahin-Wedding.ics');
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      URL.revokeObjectURL(url);
+      showToast("Calendar event (.ics) downloaded!");
+    }
+
+    document.getElementById('download-ics-btn').addEventListener('click', downloadICS);
+
+    // Google Calendar Direct Link
+    const googleCalBtn = document.getElementById('google-cal-btn');
+    const gCalUrl = "https://calendar.google.com/calendar/render?action=TEMPLATE" +
+      "&text=" + encodeURIComponent("Wedding of Navitha & Shahin") +
+      "&dates=20261116T040000Z/20261116T083000Z" +
+      "&details=" + encodeURIComponent("Thalikettu Muhurtham (9:30 - 9:45 AM) at Guruvayur Sreekrishna Temple, followed by wedding reception and lunch at King Auditorium, Thalikulam. Contact: +91 7594950818") +
+      "&location=" + encodeURIComponent("Guruvayur Sreekrishna Temple & King Auditorium, Thalikulam");
+    googleCalBtn.href = gCalUrl;
+
+    /* ------------------------------------------------------------------------
+       7. RSVP FORM SUBMISSION VIA WHATSAPP (wa.me)
+       ------------------------------------------------------------------------ */
+    const rsvpForm = document.getElementById('rsvp-form');
+    rsvpForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+
+      const name = document.getElementById('rsvp-name').value.trim();
+      const attendance = document.querySelector('input[name="attendance"]:checked').value;
+      const guests = document.getElementById('rsvp-guests').value;
+      const blessing = document.getElementById('rsvp-blessing').value.trim();
+
+      let message = `*Wedding RSVP - Navitha & Shahin*\n`;
+      message += `--------------------------------\n`;
+      message += `👤 *Name:* ${name}\n`;
+      message += `💌 *Status:* ${attendance}\n`;
+      message += `👥 *Number of Guests:* ${guests}\n`;
+      if (blessing) {
+        message += `✨ *Blessing & Message:* "${blessing}"\n`;
+      }
+      message += `--------------------------------\n`;
+      message += `Sent from the Wedding Invitation Website`;
+
+      const encodedMsg = encodeURIComponent(message);
+      const whatsappUrl = `https://wa.me/${WEDDING_CONFIG.whatsappNumber}?text=${encodedMsg}`;
+      
+      window.open(whatsappUrl, '_blank');
+      showToast("Opening WhatsApp to send RSVP...");
+    });
+
+    /* ------------------------------------------------------------------------
+       8. WEB SHARE API & CLIPBOARD FALLBACK
+       ------------------------------------------------------------------------ */
+    const shareBtn = document.getElementById('share-invite-btn');
+    shareBtn.addEventListener('click', async () => {
+      if (navigator.share) {
+        try {
+          await navigator.share({
+            title: WEDDING_CONFIG.shareTitle,
+            text: WEDDING_CONFIG.shareText,
+            url: window.location.href
+          });
+        } catch (err) {
+          // User canceled or failed
+        }
+      } else {
+        // Clipboard Fallback
+        navigator.clipboard.writeText(window.location.href).then(() => {
+          showToast("Invitation link copied to clipboard!");
+        }).catch(() => {
+          showToast("Share: " + window.location.href);
+        });
+      }
+    });
+
+    /* ------------------------------------------------------------------------
+       9. REFERENCE CARD MODAL VIEWER
+       ------------------------------------------------------------------------ */
+    const cardModal = document.getElementById('card-modal');
+    const viewCardBtn = document.getElementById('view-card-modal-btn');
+    const modalCloseBtn = document.getElementById('modal-close-btn');
+
+    if (viewCardBtn) {
+      viewCardBtn.addEventListener('click', () => {
+        cardModal.classList.add('open');
+      });
+    }
+
+    if (modalCloseBtn) {
+      modalCloseBtn.addEventListener('click', () => {
+        cardModal.classList.remove('open');
+      });
+    }
+
+    cardModal.addEventListener('click', (e) => {
+      if (e.target === cardModal) {
+        cardModal.classList.remove('open');
+      }
+    });
+
+    /* ------------------------------------------------------------------------
+       10. TOAST NOTIFICATION UTILITY
+       ------------------------------------------------------------------------ */
+    const toast = document.getElementById('toast');
+    let toastTimeout = null;
+
+    function showToast(message) {
+      toast.textContent = message;
+      toast.classList.add('show');
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3200);
+    }
+
+    /* ------------------------------------------------------------------------
+       11. GENTLE PARALLAX / GYROSCOPE TILT ON PORTRAIT
+       ------------------------------------------------------------------------ */
+    const portraitFrame = document.getElementById('portrait-frame');
+    if (portraitFrame && window.matchMedia('(prefers-reduced-motion: no-preference)').matches) {
+      document.addEventListener('mousemove', (e) => {
+        const x = (window.innerWidth / 2 - e.pageX) / 45;
+        const y = (window.innerHeight / 2 - e.pageY) / 45;
+        portraitFrame.style.transform = `rotateY(${-x}deg) rotateX(${y}deg) translateY(-4px)`;
+      });
+
+      portraitFrame.addEventListener('mouseleave', () => {
+        portraitFrame.style.transform = 'rotateY(0deg) rotateX(0deg) translateY(0px)';
+      });
+    }
+  </script>
+</body>
+</html>
